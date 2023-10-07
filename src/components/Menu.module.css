@@ -1,0 +1,15 @@
+.headerTop{
+    background-color: aquamarine;
+    padding: 20px;
+}
+.headerTop a{
+    text-decoration: none;
+    color: black;
+}
+
+.headerTop ul li{
+    margin-right: 10px;
+}
+.logo{
+    text-align: center;
+}
