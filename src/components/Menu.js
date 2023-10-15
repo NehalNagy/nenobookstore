@@ -2,6 +2,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faHeart } from "@fortawesome/free-solid-svg-icons";
 import logo from "../images/Logo_S_A.png";
 import classes from "./Menu.module.css";
 
@@ -32,6 +34,7 @@ function Menu() {
                 <a href="#">My Cart</a>
               </li>
               <li>
+                <FontAwesomeIcon icon={faHeart} />
                 <a href="#">My Wishlist</a>
               </li>
             </ul>
