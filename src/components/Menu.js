@@ -3,7 +3,11 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faHeart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartShopping,
+  faHeart,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import logo from "../images/Logo_S_A.png";
 import classes from "./Menu.module.css";
 
@@ -28,9 +32,11 @@ function Menu() {
           <div className={classes.headerControls + " col-md-4"}>
             <ul className="list-unstyled list-group list-group-horizontal">
               <li>
+                <FontAwesomeIcon icon={faUser} />
                 <a href="#">Create Account</a>
               </li>
               <li>
+                <FontAwesomeIcon icon={faCartShopping} />
                 <a href="#">My Cart</a>
               </li>
               <li>
