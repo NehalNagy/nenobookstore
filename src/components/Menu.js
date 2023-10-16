@@ -7,6 +7,7 @@ import {
   faCartShopping,
   faHeart,
   faUser,
+  faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../images/Logo_S_A.png";
 import classes from "./Menu.module.css";
@@ -18,11 +19,14 @@ function Menu() {
         <div className={classes.headerRow + " row"}>
           <div className={classes.headerBranches + " col-md-4"}>
             <ul className="list-unstyled list-group list-group-horizontal">
-              <li>
-                <a href="#">lang</a>
+              <li className={classes.rightBorder}>
+                <a href="#" className="p-3">
+                  العربية
+                </a>
               </li>
               <li>
-                <a href="#">branches</a>
+                <FontAwesomeIcon icon={faLocationDot} />
+                <a href="#">Branches</a>
               </li>
             </ul>
           </div>
@@ -30,18 +34,30 @@ function Menu() {
             <img src={logo} alt="website logo" />
           </div>
           <div className={classes.headerControls + " col-md-4"}>
-            <ul className="list-unstyled list-group list-group-horizontal">
-              <li>
-                <FontAwesomeIcon icon={faUser} />
-                <a href="#">Create Account</a>
+            <ul className="list-unstyled list-group list-group-horizontal container">
+              <li className="row">
+                <span className="col-md-12 text-center">
+                  <FontAwesomeIcon icon={faUser} />
+                </span>
+                <span className="col-md-12 text-center">
+                  <a href="#">Create Account</a>
+                </span>
               </li>
-              <li>
-                <FontAwesomeIcon icon={faCartShopping} />
-                <a href="#">My Cart</a>
+              <li className="row">
+                <span className="col-md-12 text-center">
+                  <FontAwesomeIcon icon={faCartShopping} />
+                </span>
+                <span className="col-md-12 text-center">
+                  <a href="#">My Cart</a>
+                </span>
               </li>
-              <li>
-                <FontAwesomeIcon icon={faHeart} />
-                <a href="#">My Wishlist</a>
+              <li className="row">
+                <span className="col-md-12 text-center">
+                  <FontAwesomeIcon icon={faHeart} />
+                </span>
+                <span className="col-md-12 text-center">
+                  <a href="#">My Wishlist</a>
+                </span>
               </li>
             </ul>
           </div>
