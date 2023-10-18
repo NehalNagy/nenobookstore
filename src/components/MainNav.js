@@ -6,30 +6,72 @@ function MainNav() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+       
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+          <NavDropdown title="Shopping" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Paper</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                Gifts
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Engineering</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+               Art
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#pricing">New-Arrivals</Nav.Link>
+            <NavDropdown title="Gift Festival Season" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Paper</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Gifts
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Engineering</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+               Art
+              </NavDropdown.Item>
+            </NavDropdown>
+
+            <NavDropdown title="Back to School" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Paper</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Gifts
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Engineering</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+               Art
+              </NavDropdown.Item>
+            </NavDropdown>
+
+            <NavDropdown title="Beach Tools" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Paper</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Gifts
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Engineering</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+               Art
+              </NavDropdown.Item>
+            </NavDropdown>
+            
+            <Nav.Link href="#pricing">Promotions</Nav.Link>
+            <NavDropdown title="Brands" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Paper</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Gifts
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Engineering</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+               Art
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
+         
         </Navbar.Collapse>
       </Container>
     </Navbar>
