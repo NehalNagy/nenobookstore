@@ -9,7 +9,7 @@ function MainNav() {
        
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="m-auto">
           <NavDropdown title="Shopping" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Paper</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
