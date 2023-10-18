@@ -13,7 +13,9 @@
 .logo {
   text-align: center;
 }
-
+.logo img{
+  max-width: 150px;
+}
 .rightBorder {
   border-right: 1px solid;
 }

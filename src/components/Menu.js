@@ -16,9 +16,9 @@ function Menu() {
   return (
     <header>
       <div className={classes.headerTop + " container-fluid "}>
-        <div className={classes.headerRow + " row"}>
-          <div className={classes.headerBranches + " col-md-4"}>
-            <ul className="list-unstyled list-group list-group-horizontal">
+        <div className="row align-items-center ">
+          <div className=" col-md-4">
+            <ul className="list-unstyled list-group list-group-horizontal ">
               <li className={classes.rightBorder}>
                 <a href="#" className="p-3">
                   العربية
@@ -26,7 +26,7 @@ function Menu() {
               </li>
               <li>
                 <FontAwesomeIcon icon={faLocationDot} />
-                <a href="#">Branches</a>
+                <a href="#" className="m-2">Branches</a>
               </li>
             </ul>
           </div>
