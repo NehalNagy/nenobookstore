@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import {  NavLink } from "react-router-dom";
 
 function MainNav() {
   return (
@@ -19,7 +20,7 @@ function MainNav() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">Art</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#pricing" className="pe-2">New-Arrivals</Nav.Link>
+            <Nav.Link href="#" className="pe-2">New-Arrivals</Nav.Link>
             <NavDropdown
               title="Gift Festival Season"
               id="collapsible-nav-dropdown"

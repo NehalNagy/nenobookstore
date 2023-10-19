@@ -5,7 +5,7 @@ import {
   faUser,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-import logo from "../images/Logo_S_A.png";
+import logo from "../../images/Logo_S_A.png";
 import classes from "./TopHeader.module.css";
 
 function TopHeader() {
