@@ -20,7 +20,7 @@ function MainNav() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">Art</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" className="pe-2">New-Arrivals</Nav.Link>
+            <Nav.Link as={NavLink} to="/newArrivals" className="pe-2">New-Arrivals</Nav.Link>
             <NavDropdown
               title="Gift Festival Season"
               id="collapsible-nav-dropdown"
