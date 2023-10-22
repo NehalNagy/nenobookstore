@@ -4,7 +4,7 @@ function Footer() {
     <div className={classes.footerPosition + " container"}>
       <div className={classes.footerContent}></div>
       <div className={classes.copyRight + " row"}>
-        <div className="col-12 text-center p-3">
+        <div className="col-12 text-center p-2">
           Samir & Aly Libraries © 2022 All Rights Reserved
         </div>
       </div>
