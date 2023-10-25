@@ -2,7 +2,7 @@
   --primary-dark-color: #1d3557;
   --primary-darker-color: #0c1f3b;
   --primary-color: #f1faee;
-  --primary-light-color: #d3e0ea;
+  --primary-light-color: #f1f1f1;
   --accent-color: #e02020;
   --text-dark-color: #9a9a9b;
   --text-light-color: #f8f2e5;
@@ -23,4 +23,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color:var(--accent-color)!important;
+}
+.form-control:focus{
+  border-color:var(--primary-light-color) !important;
+  background-color: var(--primary-light-color) !important;
 }
