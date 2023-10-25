@@ -1,3 +1,16 @@
+:root {
+  --primary-dark-color: #1d3557;
+  --primary-darker-color: #0c1f3b;
+  --primary-color: #f1faee;
+  --primary-light-color: #d3e0ea;
+  --accent-color: #e02020;
+  --text-dark-color: #9a9a9b;
+  --text-light-color: #f8f2e5;
+  --text-color: #1d3557;
+  --titles-nav-font: "Cairo", sans-serif;
+  --main-font: "Cairo", sans-serif;
+  --main-color: #f8f9fa;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
