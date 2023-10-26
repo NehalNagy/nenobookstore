@@ -6,10 +6,14 @@ function SearchStore() {
   return (
     <Container className="mt-4">
       <Form>
-        <div className={classes.searchBgColor+" row m-5 "}>
+        <div className={classes.searchBgColor + " row mb-5 "}>
           <div className="col-md-9">
             <Form.Group controlId="formSearch">
-              <Form.Control type="text" placeholder="Search Entire Store..." className={classes.searchInput +" shadow-none"}/>
+              <Form.Control
+                type="text"
+                placeholder="Search Entire Store..."
+                className={classes.searchInput + " shadow-none"}
+              />
             </Form.Group>
           </div>
           <div className="col-md-3">

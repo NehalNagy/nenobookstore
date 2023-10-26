@@ -1,3 +1,5 @@
 .pageContentWrapper {
   min-height: calc(100vh - 171px - 36px);
+  max-width: 80%;
+  margin: 0 auto;
 }
