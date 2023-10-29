@@ -4,8 +4,8 @@ import TopHeader from "./TopHeader";
 function Menu() {
   return (
     <header>
-     <TopHeader/>
-      <MainNav/>
+      <TopHeader />
+      <MainNav />
     </header>
   );
 }
