@@ -12,7 +12,7 @@ import MainNav from "./MainNav";
 function TopHeader() {
   return (
     <header>
-      <div className={classes.headerTop + " container-fluid "}>
+      <div className={classes.headerTop + " container"}>
         <div className="row align-items-center ">
           <div className="col-md-4 col-sm-12 col-xs-12">
             <ul className="list-unstyled list-group list-group-horizontal ">
