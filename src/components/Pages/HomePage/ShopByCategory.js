@@ -18,7 +18,9 @@ import classes from "./ShopByCategory.module.css";
 
 function ShopByCategory() {
   return (
-    <Container className="mt-3">
+    <>
+    <h3 className="mt-5">Shop By Category</h3>
+    <Container className="mt-3">     
       <Row>
         <Col xs={4} md={2} className="text-center mb-4">
           <NavLink to="#">
@@ -107,6 +109,7 @@ function ShopByCategory() {
         </Col>
       </Row>
     </Container>
+    </>
   );
 }
 export default ShopByCategory;
