@@ -1,0 +1,11 @@
+.ItemTitle{
+    text-decoration: none;
+    color: #0091FF;
+    font-weight: bold;
+}
+.ItemCode{
+    color: #7A7A7A;
+}
+.ItemDetails{
+    text-align: left;
+}
