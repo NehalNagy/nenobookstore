@@ -9,10 +9,10 @@ function ShopByCategory() {
     <>
       <Container className="mt-3">
         <Row>
-        <h3 className="mt-5">Promotions</h3>
-        <NavLink to="#" className={classes.NavLinkStyle}>
-          Browse All Offers
-        </NavLink>
+          <h3 className="mt-5">Promotions</h3>
+          <NavLink to="#" className={classes.NavLinkStyle + " mb-4"}>
+            Browse All Offers
+          </NavLink>
         </Row>
         <Row>
           <ItemCard />

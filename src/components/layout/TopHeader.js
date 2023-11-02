@@ -7,7 +7,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../images/Logo_S_A.png";
 import classes from "./TopHeader.module.css";
-import MainNav from "./MainNav";
 
 function TopHeader() {
   return (

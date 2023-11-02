@@ -1,11 +1,42 @@
-.ItemTitle{
-    text-decoration: none;
-    color: #0091FF;
-    font-weight: bold;
+.ItemTitle {
+  text-decoration: none;
+  color: #0091ff;
+  font-weight: bold;
 }
-.ItemCode{
-    color: #7A7A7A;
+.ItemCode {
+  color: #7a7a7a;
 }
-.ItemDetails{
-    text-align: left;
+.oldPrice {
+  color: #7a7a7a;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+.finalPrice {
+  font-weight: bold;
+}
+.ItemDetails {
+  text-align: left;
+}
+
+.wishlistIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  color: black;
+}
+.itemImage {
+  position: relative;
+}
+
+.promotionSale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00cbff;
+  color: white;
+}
+.addToCartBtn {
+  border-radius: 0% !important;
+  width: 100%;
 }
