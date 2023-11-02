@@ -1,10 +1,9 @@
-import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import { NavLink } from "react-router-dom";
 import ItemCard from "./ItemCard";
 import Row from "react-bootstrap/Row";
 import classes from "./ShopByPromotion.module.css";
-function ShopByCategory() {
+function ShopByPromotion() {
   return (
     <>
       <Container className="mt-3">
@@ -21,4 +20,4 @@ function ShopByCategory() {
     </>
   );
 }
-export default ShopByCategory;
+export default ShopByPromotion;
