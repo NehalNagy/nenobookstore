@@ -2,3 +2,29 @@
   border-top: 1px solid;
   font-size: 0.8rem;
 }
+.subscribeContainer {
+  position: relative;
+}
+
+.subscribeForm {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+
+.addresses {
+  font-size: 14px;
+}
+
+.footerTitle > h5 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.footerTitle > ul {
+  list-style: none;
+  padding-left: 0;
+}
+.footerLinks {
+  text-decoration: none;
+  color: #1b8194;
+}
