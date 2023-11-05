@@ -19,96 +19,96 @@ import classes from "./ShopByCategory.module.css";
 function ShopByCategory() {
   return (
     <>
-    <h3 className="mt-5">Shop By Category</h3>
-    <Container className="mt-3">     
-      <Row>
-        <Col xs={4} md={2} className="text-center mb-4">
-          <NavLink to="#">
-            <Image src={CategoryGift} className="img-fluid mb-3" />
-          </NavLink>
-          <NavLink to="#" className={classes.categoryText}>
-            Gifts
-          </NavLink>
-        </Col>
-        <Col xs={4} md={2} className="text-center mb-4">
-          <NavLink to="#">
-            <Image src={CategoryArt} className="img-fluid mb-3" />
-          </NavLink>
-          <NavLink to="#" className={classes.categoryText}>
-            Art
-          </NavLink>
-        </Col>
-        <Col xs={4} md={2} className="text-center mb-4">
-          <NavLink to="#">
-            <Image src={CategorySchool} className="img-fluid mb-3" />
-          </NavLink>
-          <NavLink to="#" className={classes.categoryText}>
-            School-Products
-          </NavLink>
-        </Col>
-        <Col xs={4} md={2} className="text-center mb-4">
-          <NavLink to="#">
-            <Image src={CategoryEng} className="img-fluid mb-3" />
-          </NavLink>
-          <NavLink to="#" className={classes.categoryText}>
-            Engineering
-          </NavLink>
-        </Col>
-        <Col xs={4} md={2} className="text-center mb-4">
-          <NavLink to="#">
-            <Image src={CategoryPaper} className="img-fluid mb-3" />
-          </NavLink>
-          <NavLink to="#" className={classes.categoryText}>
-            Paper
-          </NavLink>
-        </Col>
-        <Col xs={4} md={2} className="text-center mb-4">
-          <NavLink to="#">
-            <Image src={CategoryOffice} className="img-fluid mb-3" />
-          </NavLink>
-          <NavLink to="#" className={classes.categoryText}>
-            Office-tools
-          </NavLink>
-        </Col>
-        <Col xs={4} md={2} className="text-center mb-4">
-          <NavLink to="#">
-            <Image src={CategoryHome} className="img-fluid mb-3" />
-          </NavLink>
-          <NavLink to="#" className={classes.categoryText}>
-            Food-Supply
-          </NavLink>
-        </Col>
-        <Col xs={4} md={2} className="text-center mb-4">
-          <NavLink to="#">
-            <Image src={CategoryToys} className="img-fluid mb-3" />
-          </NavLink>
-          <NavLink to="#" className={classes.categoryText}>
-            Toys
-          </NavLink>
-        </Col>
-        <Col xs={4} md={2} className="text-center mb-4">
-          <NavLink to="#">
-            <Image src={Categoryfitness} className="img-fluid mb-3" />
-          </NavLink>
-          <NavLink to="#" className={classes.categoryText}>
-            Fitness
-          </NavLink>
-        </Col>
-        <Col xs={4} md={2} className="text-center mb-4">
-          <NavLink to="#">
-            <Image src={CategoryCamping} className="img-fluid mb-3" />
-          </NavLink>
-          <NavLink to="#" className={classes.categoryText}>
-            Camping Tools
-          </NavLink>
-        </Col>
-      </Row>
-      <Row>
-        <Col xs={12} md={12}>
-          <Image src={BannerGeneration} className="img-fluid mb-3" />
-        </Col>
-      </Row>
-    </Container>
+      <Container className="mt-3">
+        <h3 className="mt-5">Shop By Category</h3>
+        <Row>
+          <Col xs={4} md={2} className="text-center mb-4">
+            <NavLink to="#">
+              <Image src={CategoryGift} className="img-fluid mb-3" />
+            </NavLink>
+            <NavLink to="#" className={classes.categoryText}>
+              Gifts
+            </NavLink>
+          </Col>
+          <Col xs={4} md={2} className="text-center mb-4">
+            <NavLink to="#">
+              <Image src={CategoryArt} className="img-fluid mb-3" />
+            </NavLink>
+            <NavLink to="#" className={classes.categoryText}>
+              Art
+            </NavLink>
+          </Col>
+          <Col xs={4} md={2} className="text-center mb-4">
+            <NavLink to="#">
+              <Image src={CategorySchool} className="img-fluid mb-3" />
+            </NavLink>
+            <NavLink to="#" className={classes.categoryText}>
+              School-Products
+            </NavLink>
+          </Col>
+          <Col xs={4} md={2} className="text-center mb-4">
+            <NavLink to="#">
+              <Image src={CategoryEng} className="img-fluid mb-3" />
+            </NavLink>
+            <NavLink to="#" className={classes.categoryText}>
+              Engineering
+            </NavLink>
+          </Col>
+          <Col xs={4} md={2} className="text-center mb-4">
+            <NavLink to="#">
+              <Image src={CategoryPaper} className="img-fluid mb-3" />
+            </NavLink>
+            <NavLink to="#" className={classes.categoryText}>
+              Paper
+            </NavLink>
+          </Col>
+          <Col xs={4} md={2} className="text-center mb-4">
+            <NavLink to="#">
+              <Image src={CategoryOffice} className="img-fluid mb-3" />
+            </NavLink>
+            <NavLink to="#" className={classes.categoryText}>
+              Office-tools
+            </NavLink>
+          </Col>
+          <Col xs={4} md={2} className="text-center mb-4">
+            <NavLink to="#">
+              <Image src={CategoryHome} className="img-fluid mb-3" />
+            </NavLink>
+            <NavLink to="#" className={classes.categoryText}>
+              Food-Supply
+            </NavLink>
+          </Col>
+          <Col xs={4} md={2} className="text-center mb-4">
+            <NavLink to="#">
+              <Image src={CategoryToys} className="img-fluid mb-3" />
+            </NavLink>
+            <NavLink to="#" className={classes.categoryText}>
+              Toys
+            </NavLink>
+          </Col>
+          <Col xs={4} md={2} className="text-center mb-4">
+            <NavLink to="#">
+              <Image src={Categoryfitness} className="img-fluid mb-3" />
+            </NavLink>
+            <NavLink to="#" className={classes.categoryText}>
+              Fitness
+            </NavLink>
+          </Col>
+          <Col xs={4} md={2} className="text-center mb-4">
+            <NavLink to="#">
+              <Image src={CategoryCamping} className="img-fluid mb-3" />
+            </NavLink>
+            <NavLink to="#" className={classes.categoryText}>
+              Camping Tools
+            </NavLink>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} md={12}>
+            <Image src={BannerGeneration} className="img-fluid mb-3" />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }
