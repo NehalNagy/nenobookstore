@@ -3,14 +3,14 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
-
+import classes from "./MainNav.module.css";
 function MainNav() {
   return (
     <Navbar collapseOnSelect expand="lg">
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="m-auto">
+          <Nav className={classes.menuItems + " m-auto"}>
             <NavDropdown
               title="Shopping"
               id="collapsible-nav-dropdown"
