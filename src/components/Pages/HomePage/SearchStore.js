@@ -11,13 +11,13 @@ function SearchStore() {
             <Form.Group controlId="formSearch">
               <Form.Control
                 type="text"
-                placeholder="Search Entire Store..."
+                placeholder="Search entire store here..."
                 className={classes.searchInput + " shadow-none"}
               />
             </Form.Group>
           </div>
-          <div className="col-md-3">
-            <Button type="submit" className="border-0 rounded-0">
+          <div className="col-md-3 text-end">
+            <Button type="submit" className="border-0 rounded-0 pe-4 ps-4">
               Search
             </Button>
           </div>

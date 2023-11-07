@@ -19,17 +19,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 80%;
-  margin: 0 auto !important; 
+  margin: 0 auto !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-  background-color:var(--accent-color)!important;
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: var(--accent-color) !important;
 }
-.form-control:focus{
-  border-color:var(--primary-light-color) !important;
+.form-control:focus {
+  border-color: var(--primary-light-color) !important;
   background-color: var(--primary-light-color) !important;
 }
