@@ -11,15 +11,14 @@ import banner3 from "../../images/banner3.jpeg";
 import banner4 from "../../images/banner4.jpeg";
 import SubscribeBanner from "../../images/subscribe-banner.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot, faClock } from "@fortawesome/free-solid-svg-icons";
+
 import {
-  faLocationDot,
-  faClock,
   faFacebookF,
   faTwitter,
   faInstagram,
   faYoutube,
-} from "@fortawesome/free-solid-svg-icons";
-
+} from "@fortawesome/free-brands-svg-icons";
 import classes from "./Footer.module.css";
 function Footer() {
   return (
@@ -206,10 +205,30 @@ function Footer() {
             </Col>
             <Col xs={2} md={2} className={classes.footerTitle}>
               <h5>Social Media</h5>
-              <FontAwesomeIcon icon={faFacebookF} />
-              <FontAwesomeIcon icon={faTwitter} />
-              <FontAwesomeIcon icon={faInstagram} />
-              <FontAwesomeIcon icon={faYoutube} />
+              <NavLink to="#" className={classes.footerLinks}>
+                <FontAwesomeIcon
+                  icon={faFacebookF}
+                  className={classes.socialLinks + " pe-3"}
+                />
+              </NavLink>
+              <NavLink to="#" className={classes.footerLinks}>
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  className={classes.socialLinks + " pe-3"}
+                />
+              </NavLink>
+              <NavLink to="#" className={classes.footerLinks}>
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className={classes.socialLinks + " pe-3"}
+                />
+              </NavLink>
+              <NavLink to="#" className={classes.footerLinks}>
+                <FontAwesomeIcon
+                  icon={faYoutube}
+                  className={classes.socialLinks + " pe-3"}
+                />
+              </NavLink>
             </Col>
           </Row>
         </Container>
