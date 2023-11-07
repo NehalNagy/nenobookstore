@@ -4,17 +4,24 @@
 }
 .headerTop a {
   text-decoration: none;
-  color: black;
   font-size: 14px;
 }
-
+.headerControls a {
+  color: black;
+}
+.lang {
+  color: black;
+}
+.branches {
+  color: #1b8194;
+}
 .headerTop ul li {
   margin-right: 10px;
 }
 .logo {
   text-align: center;
 }
-.logo img{
+.logo img {
   max-width: 150px;
 }
 .rightBorder {

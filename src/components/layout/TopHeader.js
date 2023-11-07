@@ -16,13 +16,13 @@ function TopHeader() {
           <div className="col-md-4 col-sm-12 col-xs-12">
             <ul className="list-unstyled list-group list-group-horizontal ">
               <li className={classes.rightBorder}>
-                <a href="#" className="p-3">
+                <a href="#" className={classes.lang + " p-3"}>
                   العربية
                 </a>
               </li>
               <li>
                 <FontAwesomeIcon icon={faLocationDot} />
-                <a href="#" className="m-2">
+                <a href="#" className={classes.branches + " m-2"}>
                   Branches
                 </a>
               </li>
