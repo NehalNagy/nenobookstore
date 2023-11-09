@@ -12,17 +12,17 @@ function HomeTopSection() {
     <>
       <Container>
         <Row>
-          <Col xs={12} md={7}>
+          <Col xs={12} md={7} className="p-0">
             <Image src={LeftBanner} className="img-fluid mb-3" />
           </Col>
-          <Col xs={12} md={5}>
+          <Col xs={12} md={5} className="pe-0">
             <Container>
               <Row>
-                <Col xs={12} md={12}>
+                <Col xs={12} md={12} className="pe-0">
                   <Image src={RightBanner1} className="img-fluid mb-3" />
                 </Col>
-                <Col xs={12} md={12}>
-                  <Image src={RightBanner2} className="img-fluid mb-3" />
+                <Col xs={12} md={12} className="pe-0">
+                  <Image src={RightBanner2} className="img-fluid" />
                 </Col>
               </Row>
             </Container>
