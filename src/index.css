@@ -1,38 +1,15 @@
-:root {
-  --primary-dark-color: #1d3557;
-  --primary-darker-color: #0c1f3b;
-  --primary-color: #f1faee;
-  --primary-light-color: #f1f1f1;
-  --accent-color: #e02020;
-  --text-dark-color: #9a9a9b;
-  --text-light-color: #f8f2e5;
-  --text-color: #1d3557;
-  --titles-nav-font: "Cairo", sans-serif;
-  --main-font: "Cairo", sans-serif;
-  --main-color: #f8f9fa;
-}
 body {
-  /* margin: 0; */
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 80%;
-  margin: 0 auto !important;
+  /* max-width: 80%;
+  margin: 0 auto !important; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited {
-  background-color: var(--accent-color) !important;
-}
-.form-control:focus {
-  border-color: var(--primary-light-color) !important;
-  background-color: var(--primary-light-color) !important;
 }

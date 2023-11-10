@@ -1,0 +1,24 @@
+.loginBanner {
+  width: 100%;
+  height: 100%;
+}
+.imageContainer {
+  position: relative;
+}
+.imageText {
+  color: white;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+}
+.loginBtn {
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 10px 60px;
+}
+.loginBtn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+}

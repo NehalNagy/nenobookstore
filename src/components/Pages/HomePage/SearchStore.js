@@ -17,7 +17,10 @@ function SearchStore() {
             </Form.Group>
           </div>
           <div className="col-md-3 text-end">
-            <Button type="submit" className="border-0 rounded-0 pe-4 ps-4">
+            <Button
+              type="submit"
+              className={classes.searchBtn + " border-0 rounded-0 pe-4 ps-4"}
+            >
               Search
             </Button>
           </div>

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartShopping,
@@ -40,7 +41,7 @@ function TopHeader() {
                   <FontAwesomeIcon icon={faUser} />
                 </span>
                 <span className="col-md-12 text-center d-none d-sm-block">
-                  <a href="#">Create Account</a>
+                  <NavLink to="/account">Create Account</NavLink>
                 </span>
               </li>
               <li className="row">

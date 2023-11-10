@@ -1,27 +1,28 @@
-import { Fragment } from "react";
-import Menu from "./components/layout/Menu";
 import Home from "./components/Pages/HomePage/Home";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { createBrowserRouter , RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./components/Pages/RootLayout";
-import NewArrivals from './components/Pages/NewArrivals';
-
+import NewArrivals from "./components/Pages/NewArrivals";
+import Authentication from "./components/account/Authentication";
 
 const router = createBrowserRouter([
-  { path:'/', element:<RootLayout/>,children:[
-    { index: true,element: <Home /> },
-    { path:"newArrivals",element:<NewArrivals />},
-  ]},
-]
-);
-
-
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "newArrivals", element: <NewArrivals /> },
+    ],
+  },
+  {
+    path: "account",
+    element: <Authentication />,
+  },
+]);
 
 function App() {
-  return (
-    <RouterProvider router={router} />   
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
