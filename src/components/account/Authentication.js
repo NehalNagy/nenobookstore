@@ -3,47 +3,53 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import classes from "./Authentication.module.css";
-import logo from "../../images/Logo_S_A.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import NewAccount from "./NewAccount";
+import Login from "./Login";
+import { useState } from "react";
 function Authentication() {
+  const [signin, setSignin] = useState("signup"); // signup OR login
+
+  function loginToggleHandler() {
+    if (signin === "signup") {
+      setSignin("login");
+    } else setSignin("signup");
+  }
   return (
     <Container fluid>
       <Row>
         <Col xs={12} md={6} className={classes.imageContainer + " p-0"}>
-          {/* <Image src={loginImage} className={classes.loginBanner} /> */}
           <div className={classes.loginImage}></div>
           <div className={classes.imageText}>
-            <p>You have an account?</p>
-            <h3 className="mb-3">Log in to your account</h3>
-            <Button type="submit" className={classes.loginBtn}>
-              Login
+            {signin === "signup" && (
+              <div>
+                <p>You have an account?</p>
+                <h3 className="mb-3">Log in to your account</h3>
+              </div>
+            )}
+            {signin === "login" && (
+              <div>
+                <p>You do not have an account?</p>
+                <h3 className="mb-3">
+                  Create your account now and enjoy many benefits
+                </h3>
+                <ul>
+                  <li>Create your order faster</li>
+                  <li>Track your order easily</li>
+                  <li>Add different shipping addresses</li>
+                </ul>
+              </div>
+            )}
+            <Button
+              type="submit"
+              onClick={loginToggleHandler}
+              className={classes.loginTogglerBtn}
+            >
+              {signin === "signup" ? "Login" : "Create an Account"}
             </Button>
           </div>
         </Col>
         <Col xs={12} md={6}>
-          <div className={classes.loginWarapper}>
-            <div className={classes.logo}>
-              <img src={logo} alt="website logo" />
-            </div>
-            <h3>Create an Account</h3>
-            <p> Create an account with</p>
-            <Button
-              type="submit"
-              variant="dark"
-              className={classes.addToCartBtn}
-            >
-              <FontAwesomeIcon icon={faCartShopping} /> Google
-            </Button>
-            <Button
-              type="submit"
-              variant="dark"
-              className={classes.addToCartBtn}
-            >
-              <FontAwesomeIcon icon={faCartShopping} /> facebook
-            </Button>
-            <form></form>
-          </div>
+          {signin === "signup" ? <NewAccount /> : <Login />}
         </Col>
       </Row>
     </Container>
