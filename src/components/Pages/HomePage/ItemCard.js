@@ -6,8 +6,8 @@ import classes from "./ItemCard.module.css";
 import Stapler from "../../../images/promtion1.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faCartShopping } from "@fortawesome/free-solid-svg-icons";
-
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
 function ItemCard() {
   return (
     <Col xs={4} md={2} className="text-center mb-4">
