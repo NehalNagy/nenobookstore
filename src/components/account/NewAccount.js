@@ -6,6 +6,7 @@ import classes from "./Authentication.module.css";
 import logo from "../../images/Logo_S_A.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { Form } from "react-router-dom";
 function NewAccount() {
   return (
     <div className={classes.loginWarapper}>
@@ -30,7 +31,7 @@ function NewAccount() {
       <p className={classes.or}>
         <span>OR</span>
       </p>
-      <form>
+      <Form method="post">
         <Container>
           <Row>
             <Col xs={6} md={6}>
@@ -39,6 +40,7 @@ function NewAccount() {
                   type="text"
                   class={classes.loginInput + " form-control"}
                   id="firstName"
+                  name="firstName"
                   placeholder="First Name"
                 />
                 <label for="firstName"> First Name</label>
@@ -50,6 +52,7 @@ function NewAccount() {
                   type="text"
                   class={classes.loginInput + " form-control"}
                   id="lastName"
+                  name="lastName"
                   placeholder="Last Name"
                 />
                 <label for="lastName"> Last Name</label>
@@ -60,10 +63,11 @@ function NewAccount() {
                 <input
                   type="email"
                   class={classes.loginInput + " form-control"}
-                  id="floatingInput"
+                  id="email"
+                  name="email"
                   placeholder="name@example.com"
                 />
-                <label for="floatingInput">Email address</label>
+                <label for="email">Email address</label>
               </div>
             </Col>
             <Col xs={12} md={12}>
@@ -71,10 +75,11 @@ function NewAccount() {
                 <input
                   type="password"
                   class={classes.loginInput + " form-control"}
-                  id="floatingPassword"
+                  id="password"
+                  name="password"
                   placeholder="Password"
                 />
-                <label for="floatingPassword">Password</label>
+                <label for="password">Password</label>
               </div>
             </Col>
             <Col xs={12} md={12} className="mt-3">
@@ -82,7 +87,8 @@ function NewAccount() {
                 <input
                   type="password"
                   class={classes.loginInput + " form-control"}
-                  id="floatingPassword"
+                  id="confirmPassword"
+                  name="confirmPassword"
                   placeholder="confirmPassword"
                 />
                 <label for="confirmPassword">Confirm Password</label>
@@ -97,7 +103,7 @@ function NewAccount() {
             Create an account
           </Button>
         </Container>
-      </form>
+      </Form>
     </div>
   );
 }

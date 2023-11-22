@@ -6,6 +6,7 @@ import classes from "./Authentication.module.css";
 import logo from "../../images/Logo_S_A.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { Form } from "react-router-dom";
 function Login() {
   return (
     <div className={classes.loginWarapper}>
@@ -31,7 +32,7 @@ function Login() {
         <span>OR</span>
       </p>
       <h5>Enter your email and password</h5>
-      <form className="mt-5">
+      <Form className="mt-5">
         <Container className="p-0">
           <Row>
             <Col xs={12} md={12}>
@@ -40,6 +41,7 @@ function Login() {
                   type="email"
                   class={classes.loginInput + " form-control"}
                   id="loginEmail"
+                  name="loginEmail"
                   placeholder="name@example.com"
                 />
                 <label for="loginEmail">Email Address</label>
@@ -51,6 +53,7 @@ function Login() {
                   type="password"
                   class={classes.loginInput + " form-control"}
                   id="loginPassword"
+                  name="loginPassword"
                   placeholder="Password"
                 />
                 <label for="loginPassword">Password</label>
@@ -65,7 +68,7 @@ function Login() {
             Sign In
           </Button>
         </Container>
-      </form>
+      </Form>
     </div>
   );
 }
