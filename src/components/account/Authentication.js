@@ -5,28 +5,25 @@ import Button from "react-bootstrap/Button";
 import classes from "./Authentication.module.css";
 import NewAccount from "./NewAccount";
 import Login from "./Login";
-import { useState } from "react";
-function Authentication() {
-  const [signin, setSignin] = useState("signup"); // signup OR login
+import { Link, useSearchParams } from "react-router-dom";
 
-  function loginToggleHandler() {
-    if (signin === "signup") {
-      setSignin("login");
-    } else setSignin("signup");
-  }
+function Authentication() {
+  const [searchParams] = useSearchParams();
+  const isLogin = searchParams.get("mode") === "login";
+
   return (
     <Container fluid>
       <Row>
         <Col xs={12} md={6} className={classes.imageContainer + " p-0"}>
           <div className={classes.loginImage}></div>
           <div className={classes.imageText}>
-            {signin === "signup" && (
+            {!isLogin && (
               <div>
                 <p>You have an account?</p>
                 <h3 className="mb-3">Log in to your account</h3>
               </div>
             )}
-            {signin === "login" && (
+            {isLogin && (
               <div>
                 <p>You do not have an account?</p>
                 <h3 className="mb-3">
@@ -39,17 +36,16 @@ function Authentication() {
                 </ul>
               </div>
             )}
-            <Button
-              type="submit"
-              onClick={loginToggleHandler}
+            <Link
+              to={`?mode=${isLogin ? "signup" : "login"}`}
               className={classes.loginTogglerBtn}
             >
-              {signin === "signup" ? "Login" : "Create an Account"}
-            </Button>
+              {isLogin ? "Create an Account" : "Login"}
+            </Link>
           </div>
         </Col>
         <Col xs={12} md={6}>
-          {signin === "signup" ? <NewAccount /> : <Login />}
+          {isLogin ? <Login /> : <NewAccount />}
         </Col>
       </Row>
     </Container>

@@ -25,6 +25,8 @@
   background-color: transparent;
   border-radius: 0;
   padding: 10px 60px;
+  color: white;
+  text-decoration: none;
 }
 .loginTogglerBtn:hover {
   background-color: white;

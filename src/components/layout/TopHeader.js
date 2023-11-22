@@ -40,7 +40,7 @@ function TopHeader() {
                   <FontAwesomeIcon icon={faUser} />
                 </span>
                 <span className="col-md-12 text-center d-none d-sm-block">
-                  <NavLink to="/account">Create Account</NavLink>
+                  <NavLink to="/account?mode=signup">Create Account</NavLink>
                 </span>
               </li>
               <li className="row">
