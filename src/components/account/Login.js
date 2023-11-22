@@ -32,7 +32,7 @@ function Login() {
         <span>OR</span>
       </p>
       <h5>Enter your email and password</h5>
-      <Form className="mt-5">
+      <Form action="post" className="mt-5">
         <Container className="p-0">
           <Row>
             <Col xs={12} md={12}>
