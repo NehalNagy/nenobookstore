@@ -36,10 +36,10 @@ function Login() {
         <Container className="p-0">
           <Row>
             <Col xs={12} md={12}>
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-3">
                 <input
                   type="email"
-                  class={classes.loginInput + " form-control"}
+                  className={classes.loginInput + " form-control"}
                   id="loginEmail"
                   name="loginEmail"
                   placeholder="name@example.com"
@@ -48,10 +48,10 @@ function Login() {
               </div>
             </Col>
             <Col xs={12} md={12}>
-              <div class="form-floating">
+              <div className="form-floating">
                 <input
                   type="password"
-                  class={classes.loginInput + " form-control"}
+                  className={classes.loginInput + " form-control"}
                   id="loginPassword"
                   name="loginPassword"
                   placeholder="Password"

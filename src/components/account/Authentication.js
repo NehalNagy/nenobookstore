@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import classes from "./Authentication.module.css";
 import NewAccount from "./NewAccount";
 import Login from "./Login";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, json, redirect } from "react-router-dom";
 
 function Authentication() {
   const [searchParams] = useSearchParams();
@@ -52,3 +52,35 @@ function Authentication() {
 }
 
 export default Authentication;
+
+export async function action({ request }) {
+  console.log("hi in action!");
+  const searchparams = new URL(request.url).searchParams;
+  const mode = searchparams.get("mode") || "login";
+  console.log(mode);
+  if (mode !== "login" && mode !== "signup") {
+    throw json({ message: "Unsupported mode." }, { status: 422 });
+  }
+  const data = await request.formData();
+  const authData = {
+    email: data.get("email"),
+    password: data.get("password"),
+  };
+
+  const response = await fetch("http://localhost:8080/" + mode, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(authData),
+  });
+
+  if (response.status === 422 || response.status === 401) {
+    return response;
+  }
+  if (!response.ok) {
+    throw json({ message: "could not authenticate user." }, { status: 500 });
+  }
+  // soon: manage that token
+  return redirect("/");
+}

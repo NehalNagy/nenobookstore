@@ -4,8 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./components/Pages/RootLayout";
 import NewArrivals from "./components/Pages/NewArrivals";
-import Authentication from "./components/account/Authentication";
-
+import Authentication, {
+  action as authAction,
+} from "./components/account/Authentication";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
   {
     path: "account",
     element: <Authentication />,
+    action: authAction,
   },
 ]);
 

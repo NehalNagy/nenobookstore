@@ -35,63 +35,63 @@ function NewAccount() {
         <Container>
           <Row>
             <Col xs={6} md={6}>
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-3">
                 <input
                   type="text"
-                  class={classes.loginInput + " form-control"}
+                  className={classes.loginInput + " form-control"}
                   id="firstName"
                   name="firstName"
                   placeholder="First Name"
                 />
-                <label for="firstName"> First Name</label>
+                <label htmlFor="firstName"> First Name</label>
               </div>
             </Col>
             <Col xs={6} md={6}>
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-3">
                 <input
                   type="text"
-                  class={classes.loginInput + " form-control"}
+                  className={classes.loginInput + " form-control"}
                   id="lastName"
                   name="lastName"
                   placeholder="Last Name"
                 />
-                <label for="lastName"> Last Name</label>
+                <label htmlFor="lastName"> Last Name</label>
               </div>
             </Col>
             <Col xs={12} md={12}>
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-3">
                 <input
                   type="email"
-                  class={classes.loginInput + " form-control"}
+                  className={classes.loginInput + " form-control"}
                   id="email"
                   name="email"
                   placeholder="name@example.com"
                 />
-                <label for="email">Email address</label>
+                <label htmlFor="email">Email address</label>
               </div>
             </Col>
             <Col xs={12} md={12}>
-              <div class="form-floating">
+              <div className="form-floating">
                 <input
                   type="password"
-                  class={classes.loginInput + " form-control"}
+                  className={classes.loginInput + " form-control"}
                   id="password"
                   name="password"
                   placeholder="Password"
                 />
-                <label for="password">Password</label>
+                <label htmlFor="password">Password</label>
               </div>
             </Col>
             <Col xs={12} md={12} className="mt-3">
-              <div class="form-floating">
+              <div className="form-floating">
                 <input
                   type="password"
-                  class={classes.loginInput + " form-control"}
+                  className={classes.loginInput + " form-control"}
                   id="confirmPassword"
                   name="confirmPassword"
                   placeholder="confirmPassword"
                 />
-                <label for="confirmPassword">Confirm Password</label>
+                <label htmlFor="confirmPassword">Confirm Password</label>
               </div>
             </Col>
           </Row>
