@@ -1,0 +1,14 @@
+.subscribeContainer {
+  position: relative;
+}
+
+.subscribeForm {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+
+.bannerImages {
+  width: 100%;
+  height: auto;
+}

@@ -4,6 +4,7 @@ import SearchStore from "./SearchStore";
 import ShopByCategory from "./ShopByCategory";
 import ShopByPromotions from "./ShopByPromotions";
 import ShopByNewArrivals from "./ShopByNewArrivals";
+import BottomBanners from "./BottomBanners";
 function Home() {
   return (
     <div className={classes.pageContentWrapper}>
@@ -12,6 +13,7 @@ function Home() {
       <ShopByCategory />
       <ShopByPromotions />
       <ShopByNewArrivals />
+      <BottomBanners />
     </div>
   );
 }
