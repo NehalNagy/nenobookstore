@@ -4,12 +4,18 @@ import Row from "react-bootstrap/Row";
 import classes from "./Authentication.module.css";
 import NewAccount from "./NewAccount";
 import Login from "./Login";
-import { Link, useSearchParams, json, redirect } from "react-router-dom";
+import {
+  Link,
+  useSearchParams,
+  json,
+  redirect,
+  useActionData,
+} from "react-router-dom";
 
 function Authentication() {
   const [searchParams] = useSearchParams();
   const isLogin = searchParams.get("mode") === "login";
-
+  const data = useActionData();
   return (
     <Container fluid>
       <Row>
@@ -45,6 +51,15 @@ function Authentication() {
         </Col>
         <Col xs={12} md={6}>
           {isLogin ? <Login /> : <NewAccount />}
+          {data && data.errors && (
+            <ul>
+              {Object.values(data.errors).map((err) => (
+                <li key={err}>{err}</li>
+              ))}
+            </ul>
+          )}
+
+          {data && data.message && <p>{data.message}</p>}
         </Col>
       </Row>
     </Container>
@@ -66,8 +81,9 @@ export async function action({ request }) {
     email: data.get("email"),
     password: data.get("password"),
   };
-
-  const response = await fetch("http://localhost:8080/" + mode, {
+  //code sand box url >>>>> https://575pgn-8080.csb.app/
+  // local host >>>>>>>>>>> http://localhost:8080/
+  const response = await fetch("https://575pgn-8080.csb.app/" + mode, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

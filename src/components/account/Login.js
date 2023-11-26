@@ -41,10 +41,10 @@ function Login() {
                   type="email"
                   className={classes.loginInput + " form-control"}
                   id="loginEmail"
-                  name="loginEmail"
+                  name="email"
                   placeholder="name@example.com"
                 />
-                <label for="loginEmail">Email Address</label>
+                <label htmlFor="loginEmail">Email Address</label>
               </div>
             </Col>
             <Col xs={12} md={12}>
@@ -53,10 +53,10 @@ function Login() {
                   type="password"
                   className={classes.loginInput + " form-control"}
                   id="loginPassword"
-                  name="loginPassword"
+                  name="password"
                   placeholder="Password"
                 />
-                <label for="loginPassword">Password</label>
+                <label htmlFor="loginPassword">Password</label>
               </div>
             </Col>
           </Row>
