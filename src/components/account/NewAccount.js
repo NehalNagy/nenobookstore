@@ -6,8 +6,10 @@ import classes from "./Authentication.module.css";
 import logo from "../../images/Logo_S_A.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { Form } from "react-router-dom";
+import { Form, useNavigation } from "react-router-dom";
 function NewAccount() {
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
   return (
     <div className={classes.loginWarapper}>
       <div className={classes.logo + " mb-5"}>
@@ -99,8 +101,9 @@ function NewAccount() {
             type="submit"
             variant="dark"
             className={classes.loginBtn + " mt-3"}
+            disabled={isSubmitting}
           >
-            Create an account
+            {isSubmitting ? "Submitting..." : "Create an account"}
           </Button>
         </Container>
       </Form>

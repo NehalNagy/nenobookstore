@@ -7,10 +7,12 @@ import NewArrivals from "./components/Pages/NewArrivals";
 import Authentication, {
   action as authAction,
 } from "./components/account/Authentication";
+import ErrorPage from "./components/ErrorPage";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Home /> },
       { path: "newArrivals", element: <NewArrivals /> },
