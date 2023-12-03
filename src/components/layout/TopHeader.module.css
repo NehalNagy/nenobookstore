@@ -2,12 +2,12 @@
   /* background-color: aquamarine; */
   padding: 20px;
 }
-.headerTop a {
+.headerTop a ,.headerControls button{
   text-decoration: none;
   font-size: 14px;
 }
-.headerControls a {
-  color: black;
+.headerControls a ,.headerControls button{
+  color: black ;
 }
 .lang {
   color: black;

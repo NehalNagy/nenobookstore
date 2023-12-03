@@ -1,8 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { Form, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartShopping,
   faLocationDot,
+  faArrowRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
 import logo from "../../images/Logo_S_A.png";
@@ -16,13 +17,13 @@ function TopHeader() {
           <div className="col-md-4 col-sm-12 col-xs-12">
             <ul className="list-unstyled list-group list-group-horizontal ">
               <li className={classes.rightBorder}>
-                <a href="#" className={classes.lang + " p-3"}>
+                <a href="/" className={classes.lang + " p-3"}>
                   العربية
                 </a>
               </li>
               <li>
                 <FontAwesomeIcon icon={faLocationDot} />
-                <a href="#" className={classes.branches + " m-2"}>
+                <a href="/" className={classes.branches + " m-2"}>
                   Branches
                 </a>
               </li>
@@ -57,6 +58,16 @@ function TopHeader() {
                 </span>
                 <span className="col-md-12 text-center d-none d-sm-block">
                   <a href="#">My Wishlist</a>
+                </span>
+              </li>
+              <li className="row">
+                <span className="col-md-12 text-center">
+                  <FontAwesomeIcon icon={faArrowRightFromBracket} />
+                </span>
+                <span className="col-md-12 text-center d-none d-sm-block">
+                  <Form action="/logout" method="post">                  
+                    <button className="btn btn-link">logout</button>
+                  </Form>
                 </span>
               </li>
             </ul>

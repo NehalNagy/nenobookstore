@@ -8,6 +8,7 @@ import Authentication, {
   action as authAction,
 } from "./components/account/Authentication";
 import ErrorPage from "./components/ErrorPage";
+import { action as logoutAction } from "./components/account/Logout";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
     element: <Authentication />,
     action: authAction,
   },
+  {
+    path:'logout',
+    action: logoutAction
+
+  }
 ]);
 
 function App() {
