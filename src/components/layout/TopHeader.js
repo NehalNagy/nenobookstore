@@ -1,4 +1,4 @@
-import { Form, NavLink } from "react-router-dom";
+import { Form, NavLink, useRouteLoaderData } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartShopping,
@@ -10,6 +10,7 @@ import logo from "../../images/Logo_S_A.png";
 import classes from "./TopHeader.module.css";
 
 function TopHeader() {
+  const token = useRouteLoaderData("root");
   return (
     <header>
       <div className={classes.headerTop + " container"}>
@@ -36,20 +37,22 @@ function TopHeader() {
             className={classes.headerControls + " col-md-4 col-sm-3 col-xs-2"}
           >
             <ul className="list-unstyled list-group list-group-horizontal container">
-              <li className="row">
-                <span className="col-md-12 text-center">
-                  <FontAwesomeIcon icon={faUser} />
-                </span>
-                <span className="col-md-12 text-center d-none d-sm-block">
-                  <NavLink to="/account?mode=signup">Create Account</NavLink>
-                </span>
-              </li>
+              {!token && (
+                <li className="row">
+                  <span className="col-md-12 text-center">
+                    <FontAwesomeIcon icon={faUser} />
+                  </span>
+                  <span className="col-md-12 text-center d-none d-sm-block">
+                    <NavLink to="/account?mode=login">Login</NavLink>
+                  </span>
+                </li>
+              )}
               <li className="row">
                 <span className="col-md-12 text-center">
                   <FontAwesomeIcon icon={faCartShopping} />
                 </span>
                 <span className="col-md-12 text-center d-none d-sm-block">
-                  <a href="#">My Cart</a>
+                  <NavLink to="/mycart">My Cart</NavLink>
                 </span>
               </li>
               <li className="row">
@@ -60,22 +63,20 @@ function TopHeader() {
                   <a href="#">My Wishlist</a>
                 </span>
               </li>
-              <li className="row">
-                <span className="col-md-12 text-center">
-                  <FontAwesomeIcon icon={faArrowRightFromBracket} />
-                </span>
-                <span className="col-md-12 text-center d-none d-sm-block">
-                  <Form action="/logout" method="post">                  
-                    <button className="btn btn-link">logout</button>
-                  </Form>
-                </span>
-              </li>
+              {token && (
+                <li className="row">
+                  <span className="col-md-12 text-center">
+                    <FontAwesomeIcon icon={faArrowRightFromBracket} />
+                  </span>
+                  <span className="col-md-12 text-center d-none d-sm-block">
+                    <Form action="/logout" method="post">
+                      <button className="btn btn-link">logout</button>
+                    </Form>
+                  </span>
+                </li>
+              )}
             </ul>
           </div>
-
-          {/* <div className="col-md-12 col-sm-3 col-xs-2">
-            <MainNav />
-          </div> */}
         </div>
       </div>
     </header>
