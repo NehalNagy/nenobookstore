@@ -60,7 +60,7 @@ function TopHeader() {
                   <FontAwesomeIcon icon={faHeart} />
                 </span>
                 <span className="col-md-12 text-center d-none d-sm-block">
-                  <a href="#">My Wishlist</a>
+                  <a href="/">My Wishlist</a>
                 </span>
               </li>
               {token && (
