@@ -2,6 +2,7 @@ import { Outlet, useLoaderData, useSubmit } from "react-router-dom";
 import Footer from "../layout/Footer";
 import Menu from "../layout/Menu";
 import { useEffect } from "react";
+import { getTokenDuration } from "../../util/auth";
 
 function RootLayout() {
   //Automatic logout after 1 hour (as specified in backend)
@@ -10,11 +11,17 @@ function RootLayout() {
 
   useEffect(() => {
     if (!token) {
-      return;
+      return ;
     }
+    if(token==='EXPIRED'){
+      submit(null, { action: "/logout", method: "post" });
+      return ;
+    }
+    const tokenDuration = getTokenDuration();
+    console.log(tokenDuration);
     setTimeout(() => {
       submit(null, { action: "/logout", method: "post" });
-    }, 1 * 60 * 60 * 1000);
+    }, tokenDuration);
   }, [token, submit]);
 
   return (
