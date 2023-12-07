@@ -105,7 +105,10 @@ function ShopByCategory() {
         </Row>
         <Row>
           <Col xs={12} md={12}>
-            <Image src={BannerGeneration} className="img-fluid mb-3" />
+            <Image
+              src={BannerGeneration}
+              className={classes.banner + " mb-3"}
+            />
           </Col>
         </Row>
       </Container>
