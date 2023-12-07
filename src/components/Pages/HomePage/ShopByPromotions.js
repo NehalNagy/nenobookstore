@@ -14,7 +14,11 @@ function ShopByPromotion() {
           </NavLink>
         </Row>
         <Row>
-          <ItemCard />
+          <ItemCard numberOfCol={3} />
+          <ItemCard numberOfCol={3} />
+          <ItemCard numberOfCol={3} />
+          <ItemCard numberOfCol={3} />
+          <ItemCard numberOfCol={3} />
         </Row>
       </Container>
     </>

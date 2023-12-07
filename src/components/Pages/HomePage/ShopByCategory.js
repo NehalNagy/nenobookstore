@@ -23,10 +23,10 @@ function ShopByCategory() {
         <h3 className="mt-5">Shop By Category</h3>
         <Row>
           <Col xs={4} md={2} className="text-center mb-4">
-            <NavLink to="#">
+            <NavLink to="/products">
               <Image src={CategoryGift} className="img-fluid mb-3" />
             </NavLink>
-            <NavLink to="#" className={classes.categoryText}>
+            <NavLink to="/products" className={classes.categoryText}>
               Gifts
             </NavLink>
           </Col>

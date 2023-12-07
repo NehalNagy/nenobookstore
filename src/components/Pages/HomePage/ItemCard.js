@@ -8,9 +8,9 @@ import Stapler from "../../../images/promtion1.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
-function ItemCard() {
+function ItemCard(props) {
   return (
-    <Col xs={4} md={2} className="text-center mb-4">
+    <Col xs={4} md={props.numberOfCol} className="text-center mb-4">
       <div className={classes.itemImage}>
         <div className={classes.promotionSale}>Sale 40%</div>
         <NavLink to="#">
