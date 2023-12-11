@@ -17,7 +17,7 @@ import {
 import classes from "./Footer.module.css";
 function Footer() {
   return (
-    <Container>
+    <Container className="mt-5">
       <Row>
         <Col xs={3} md={3} className={classes.footerTitle}>
           <h5>

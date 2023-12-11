@@ -4,8 +4,9 @@ import SubCategory from "../../images/bd.jpg";
 import generalClasses from "./pages.module.css";
 import classes from "./ItemsList.module.css";
 import { register } from "swiper/element/bundle";
-import { useRef, useEffect } from "react";
-
+import { useRef } from "react";
+import Accordion from "react-bootstrap/Accordion";
+import Form from "react-bootstrap/Form";
 register();
 
 function ItemsList() {
@@ -45,11 +46,66 @@ function ItemsList() {
         </swiper-container>
       </div>
       <div className="row">
-        <div className="col-md-2">filter</div>
-        <div className="col-md-10">
+        <div className="col-md-3">
+          <Accordion>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>
+                <strong>Category</strong>
+              </Accordion.Header>
+              <Accordion.Body>
+                <Form>
+                  <div key="default-checkbox" className="mb-3">
+                    <Form.Check
+                      type="checkbox"
+                      id="checkbox1"
+                      label="subcategory 1"
+                    />
+                    <Form.Check
+                      type="checkbox"
+                      id="checkbox2"
+                      label="subcategory 2"
+                    />
+                    <Form.Check
+                      type="checkbox"
+                      id="checkbox3"
+                      label="subcategory 3"
+                    />
+                  </div>
+                </Form>
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>
+                <strong>Brand</strong>
+              </Accordion.Header>
+              <Accordion.Body>
+                <Form>
+                  <div key="default-checkbox" className="mb-3">
+                    <Form.Check
+                      type="checkbox"
+                      id="checkbox4"
+                      label="brand 1"
+                    />
+                    <Form.Check
+                      type="checkbox"
+                      id="checkbox5"
+                      label="brand 2"
+                    />
+                    <Form.Check
+                      type="checkbox"
+                      id="checkbox6"
+                      label="brand 3"
+                    />
+                  </div>
+                </Form>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </div>
+        <div className="col-md-9">
           <div className="row mb-5">
             <div className="col-4">
-              <strong>Gifts</strong>
+              <h5 className={classes.categoryName}>Gifts </h5>
               Items 1-12 of 713
             </div>
             <div className="col-4">sort filter</div>
