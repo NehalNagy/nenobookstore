@@ -8,6 +8,9 @@ import {
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
 import logo from "../../images/Logo_S_A.png";
 import classes from "./TopHeader.module.css";
+import ShoppingCartModal from "../Pages/Cart/ShoppingCartModal";
+import React, { useState } from "react";
+import { usePopper } from "react-popper";
 
 function TopHeader() {
   const token = useRouteLoaderData("root");
@@ -53,6 +56,7 @@ function TopHeader() {
                 </span>
                 <span className="col-md-12 text-center d-none d-sm-block">
                   <NavLink to="/mycart">My Cart</NavLink>
+                  <ShoppingCartModal />
                 </span>
               </li>
               <li className="row">
