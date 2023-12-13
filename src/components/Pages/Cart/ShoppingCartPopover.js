@@ -11,21 +11,21 @@ function ShoppingCartPopover() {
         <div className="col-md-2">
           <Image src={CartItem} className={classes.cartItemImage} />
         </div>
-        <div className="col-md-4">
-          <p>6111501131100</p>
-          <p>MUST KINDERGARTEN BACKPACK LITTLE FAIRY No: 84489</p>
+        <div className="col-md-5">
+          <span className={classes.cartItemCode}>6111501131100</span>
+          <p>MUST KINDERGARTEN BACKPACK LITTLE FAIRY <br/> No: 84489</p>
         </div>
         <div className="col-md-2">x 1</div>
         <div className="col-md-2">1500 LE</div>
-        <div className="col-md-2">
+        <div className="col-md-1">
           <FontAwesomeIcon icon={faTrashCan} />
         </div>
       </div>
       <div className="row">
         <div className="col-6">
-          <h3>Cart Subtotal</h3>
+          <h5>Cart Subtotal</h5>
         </div>
-        <div className="col-6">1500 LE</div>
+        <div className="col-6 text-end"><h5>1500 LE</h5></div>
       </div>
     </div>
   );
