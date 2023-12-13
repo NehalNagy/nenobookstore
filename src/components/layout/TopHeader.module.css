@@ -27,3 +27,6 @@
 .rightBorder {
   border-right: 1px solid;
 }
+.popoverContainer{
+  max-width: 460px !important;
+}
