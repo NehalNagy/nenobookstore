@@ -56,7 +56,7 @@ function TopHeader() {
                 </span>
                 <span className="col-md-12 text-center d-none d-sm-block">
                   <NavLink to="/mycart">My Cart</NavLink>
-                  <ShoppingCartModal />
+                  {/* <ShoppingCartModal /> */}
                 </span>
               </li>
               <li className="row">
