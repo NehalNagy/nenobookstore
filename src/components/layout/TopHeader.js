@@ -8,7 +8,7 @@ import {
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
 import logo from "../../images/Logo_S_A.png";
 import classes from "./TopHeader.module.css";
-import { Button, Popover, OverlayTrigger } from "react-bootstrap";
+import { Popover, OverlayTrigger } from "react-bootstrap";
 import ShoppingCartPopover from "../Pages/Cart/ShoppingCartPopover";
 
 const popover = (
@@ -16,7 +16,7 @@ const popover = (
     <Popover.Header as="h3">My Shopping Cart</Popover.Header>
     <Popover.Body>
       <ShoppingCartPopover />
-    </Popover.Body>   
+    </Popover.Body>
   </Popover>
 );
 
@@ -42,7 +42,7 @@ function TopHeader() {
             </ul>
           </div>
           <div className={classes.logo + " col-md-4 col-sm-3 col-sx-2"}>
-            <img src={logo} alt="website logo" />
+          <NavLink to='/' ><img src={logo} alt="website logo" /></NavLink> 
           </div>
           <div
             className={classes.headerControls + " col-md-4 col-sm-3 col-xs-2"}
@@ -51,36 +51,36 @@ function TopHeader() {
               {!token && (
                 <li className="row">
                   <span className="col-md-12 text-center">
-                    <FontAwesomeIcon icon={faUser} />
+                  <NavLink to="/account?mode=login">   <FontAwesomeIcon icon={faUser} /></NavLink>
                   </span>
                   <span className="col-md-12 text-center d-none d-sm-block">
                     <NavLink to="/account?mode=login">Login</NavLink>
                   </span>
                 </li>
               )}
+              <OverlayTrigger
+                trigger="click"
+                placement="bottom"
+                overlay={popover}
+                rootClose={true}
+              >
+                <li className="row">
+                  <span className="col-md-12 text-center">
+                    <NavLink>
+                      <FontAwesomeIcon icon={faCartShopping} />
+                    </NavLink>
+                  </span>
+                  <span className="col-md-12 text-center d-none d-sm-block">
+                    <NavLink>My Cart</NavLink>
+                  </span>
+                </li>
+              </OverlayTrigger>
               <li className="row">
                 <span className="col-md-12 text-center">
-                  <FontAwesomeIcon icon={faCartShopping} />
+                <NavLink to="/">  <FontAwesomeIcon icon={faHeart} /></NavLink>
                 </span>
                 <span className="col-md-12 text-center d-none d-sm-block">
-                 
-                  
-                  <OverlayTrigger
-                    trigger="click"
-                    placement="bottom"
-                    overlay={popover}
-                    rootClose={true}
-                  >
-                     <NavLink >My Cart</NavLink>
-                  </OverlayTrigger>
-                </span>
-              </li>
-              <li className="row">
-                <span className="col-md-12 text-center">
-                  <FontAwesomeIcon icon={faHeart} />
-                </span>
-                <span className="col-md-12 text-center d-none d-sm-block">
-                  <a href="/">My Wishlist</a>
+                <NavLink to="/">My Wishlist</NavLink>
                 </span>
               </li>
               {token && (
