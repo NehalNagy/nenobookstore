@@ -2,12 +2,14 @@
   /* background-color: aquamarine; */
   padding: 20px;
 }
-.headerTop a ,.headerControls button{
+.headerTop a,
+.headerControls button {
   text-decoration: none;
   font-size: 14px;
 }
-.headerControls a ,.headerControls button{
-  color: black ;
+.headerControls a,
+.headerControls button {
+  color: black;
 }
 .lang {
   color: black;
@@ -27,7 +29,27 @@
 .rightBorder {
   border-right: 1px solid;
 }
-.popoverContainer{
-  max-width: 460px !important;
 
+/*start cart button*/
+.popoverContainer {
+  max-width: 460px !important;
 }
+.myCartBtn {
+  position: relative;
+}
+.cartBadge {
+  position: absolute;
+  top: 0;
+  right: 23px;
+  background: #e02020;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*end cart button*/

@@ -42,7 +42,9 @@ function TopHeader() {
             </ul>
           </div>
           <div className={classes.logo + " col-md-4 col-sm-3 col-sx-2"}>
-          <NavLink to='/' ><img src={logo} alt="website logo" /></NavLink> 
+            <NavLink to="/">
+              <img src={logo} alt="website logo" />
+            </NavLink>
           </div>
           <div
             className={classes.headerControls + " col-md-4 col-sm-3 col-xs-2"}
@@ -51,7 +53,10 @@ function TopHeader() {
               {!token && (
                 <li className="row">
                   <span className="col-md-12 text-center">
-                  <NavLink to="/account?mode=login">   <FontAwesomeIcon icon={faUser} /></NavLink>
+                    <NavLink to="/account?mode=login">
+                      {" "}
+                      <FontAwesomeIcon icon={faUser} />
+                    </NavLink>
                   </span>
                   <span className="col-md-12 text-center d-none d-sm-block">
                     <NavLink to="/account?mode=login">Login</NavLink>
@@ -64,11 +69,12 @@ function TopHeader() {
                 overlay={popover}
                 rootClose={true}
               >
-                <li className="row">
+                <li className={classes.myCartBtn + " row"}>
                   <span className="col-md-12 text-center">
                     <NavLink>
                       <FontAwesomeIcon icon={faCartShopping} />
                     </NavLink>
+                    <span className={classes.cartBadge}> 2</span>
                   </span>
                   <span className="col-md-12 text-center d-none d-sm-block">
                     <NavLink>My Cart</NavLink>
@@ -77,10 +83,12 @@ function TopHeader() {
               </OverlayTrigger>
               <li className="row">
                 <span className="col-md-12 text-center">
-                <NavLink to="/">  <FontAwesomeIcon icon={faHeart} /></NavLink>
+                  <NavLink to="/">
+                    <FontAwesomeIcon icon={faHeart} />
+                  </NavLink>
                 </span>
                 <span className="col-md-12 text-center d-none d-sm-block">
-                <NavLink to="/">My Wishlist</NavLink>
+                  <NavLink to="/">My Wishlist</NavLink>
                 </span>
               </li>
               {token && (
