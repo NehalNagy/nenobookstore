@@ -6,7 +6,7 @@ import classes from "./ShopByPromotion.module.css";
 function ShopByNewArrivals() {
   return (
     <>
-      <Container className="mt-3">
+      <Container className="mt-3 mb-5">
         <Row>
           <h3 className="mt-5">New Arrivals</h3>
           <NavLink to="#" className={classes.NavLinkStyle + " mb-4"}>
@@ -14,7 +14,12 @@ function ShopByNewArrivals() {
           </NavLink>
         </Row>
         <Row>
-          <ItemCard />
+          <ItemCard numberOfCol={2} />
+          <ItemCard numberOfCol={2} />
+          <ItemCard numberOfCol={2} />
+          <ItemCard numberOfCol={2} />
+          <ItemCard numberOfCol={2} />
+          <ItemCard numberOfCol={2} />
         </Row>
       </Container>
     </>
