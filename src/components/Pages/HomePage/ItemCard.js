@@ -12,7 +12,11 @@ function ItemCard(props) {
   return (
     <Col xs={4} md={props.numberOfCol} className="text-center mb-4">
       <div className={classes.itemImage}>
-        <div className={classes.promotionSale}>Sale 40%</div>
+        {props.product.discountPercent > 0 && (
+          <div className={classes.promotionSale}>
+            Sale {props.product.discountPercent}%
+          </div>
+        )}
         <NavLink to="#">
           <Image src={Stapler} className="img-fluid mb-3" />
           <span className={classes.wishlistIcon}>
@@ -23,13 +27,13 @@ function ItemCard(props) {
 
       <div className={classes.ItemDetails + " mb-3"}>
         <div>
-          <span className={classes.ItemCode}>2500185391 </span>
+          <span className={classes.ItemCode}>{props.product.sku} </span>
         </div>
         <NavLink to="#" className={classes.ItemTitle}>
-          Eagle-Heavy Dutty Stapler High capacty Stapling 100 sheet 23-15 8538
+          {props.product.name}
         </NavLink>
         <div>
-          <span className={classes.oldPrice}>690.00ج.م </span>
+          <span className={classes.oldPrice}>{props.product.price}ج.م </span>
         </div>
         <div>
           <span className={classes.finalPrice}>414.00ج.م </span>
