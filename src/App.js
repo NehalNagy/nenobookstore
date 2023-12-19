@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./components/Pages/RootLayout";
 import NewArrivals from "./components/Pages/NewArrivals";
-import MyCart from "./components/Pages/MyCart";
+import Cart from "./components/Pages/Cart/Cart";
 import Authentication, {
   action as authAction,
 } from "./components/account/Authentication";
@@ -23,6 +23,11 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "newArrivals", element: <NewArrivals /> },
       { path: "products", element: <ItemsList /> },
+      {
+        path: "cart",
+        element: <Cart />,
+        loader: checkAuthLoader,
+      },
     ],
   },
   {
@@ -30,11 +35,7 @@ const router = createBrowserRouter([
     element: <Authentication />,
     action: authAction,
   },
-  {
-    path: "mycart",
-    element: <MyCart />,
-    loader: checkAuthLoader,
-  },
+
   {
     path: "logout",
     action: logoutAction,

@@ -83,7 +83,7 @@ export async function action({ request }) {
   };
   //code sand box url >>>>> https://575pgn-8080.csb.app/
   // local host >>>>>>>>>>> http://localhost:8080/
-  const response = await fetch("http://localhost:8080/" + mode, {
+  const response = await fetch("https://575pgn-8080.csb.app/" + mode, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -101,9 +101,9 @@ export async function action({ request }) {
   const resData = await response.json();
   const token = resData.token;
   localStorage.setItem("token", token);
-const expiration = new Date();
-expiration.setHours(expiration.getHours() + 1);
-localStorage.setItem('expiration',expiration.toISOString());
+  const expiration = new Date();
+  expiration.setHours(expiration.getHours() + 1);
+  localStorage.setItem("expiration", expiration.toISOString());
 
   return redirect("/");
 }
