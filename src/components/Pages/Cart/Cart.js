@@ -1,8 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
-import Button from "react-bootstrap/Button";
+import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
 function Cart() {
   return (
@@ -22,14 +21,16 @@ function Cart() {
             </thead>
             <tbody class="table-group-divider">
               <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
+                <td>
+                 <CartItem/>
+                </td>
+                <td>5</td>
+                <th>1,513.00ج.م</th>
               </tr>
               <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
+                <td> <CartItem/></td>
+                <td>3</td>
+                <th>1,513.00ج.م</th>
               </tr>
             </tbody>
           </table>
