@@ -6,11 +6,11 @@ import CartItemImage from "../../../images/backpack.jpg";
 import classes from "./CartItem.module.css";
 function CartItem() {
   return (
-    <div className="row mt-2">
-      <div className="col-md-2">
+    <div className="row">
+      <div className="col-md-2 col-sm-2">
         <Image src={CartItemImage} className={classes.cartItemImage} />
       </div>
-      <div className="col-md-7">
+      <div className="col-md-7 col-sm-5">
         <span className={classes.cartItemCode}>6111501131100</span>
         <p className={classes.itemName}>
           MUST KINDERGARTEN BACKPACK LITTLE FAIRY <br /> No: 84489

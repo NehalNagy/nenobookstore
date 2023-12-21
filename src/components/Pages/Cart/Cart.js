@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
+import CartItemQuantityBtn from "./CartItemQuantityBtn";
 function Cart() {
   return (
     <Container>
@@ -11,26 +12,36 @@ function Cart() {
       </h3>
       <Row className="mt-5">
         <Col md={8}>
-          <table class="table table-sm">
+          <table class="table ">
             <thead>
               <tr>
                 <th scope="col">Product</th>
-                <th scope="col">Qty</th>
-                <th scope="col">Price</th>
+                <th className="text-center" scope="col">
+                  Qty
+                </th>
+                <th className="text-center" scope="col">
+                  Price
+                </th>
               </tr>
             </thead>
             <tbody class="table-group-divider">
               <tr>
                 <td>
-                 <CartItem/>
+                  <CartItem />
                 </td>
-                <td>5</td>
-                <th>1,513.00ج.م</th>
+                <td>
+                  <CartItemQuantityBtn />
+                </td>
+                <th className="text-center">1,513.00ج.م</th>
               </tr>
               <tr>
-                <td> <CartItem/></td>
-                <td>3</td>
-                <th>1,513.00ج.م</th>
+                <td>
+                  <CartItem />
+                </td>
+                <td>
+                  <CartItemQuantityBtn />
+                </td>
+                <th className="text-center">1,513.00ج.م</th>
               </tr>
             </tbody>
           </table>

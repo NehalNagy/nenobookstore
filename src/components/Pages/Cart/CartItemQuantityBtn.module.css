@@ -1,0 +1,15 @@
+.quantityBtns {
+  border: 1px solid #929dad;
+  width: 100%;
+}
+.quantityIncrement {
+  border-left: 1px solid #929dad;
+}
+.quantityDecrement {
+  border-right: 1px solid #929dad;
+}
+
+.quantityInput {
+  width: 100%;
+  border: none;
+}
