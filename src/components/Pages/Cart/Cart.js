@@ -46,7 +46,25 @@ function Cart() {
             </tbody>
           </table>
         </Col>
-        <Col md={4}>checkout</Col>
+        <Col md={4} className={classes.checkoutPanel}>
+          <h3 className="pt-3 pb-3">Shopping Cart Total</h3>
+          <Row>
+            <Col md={6}>
+              <h5>Subtotal</h5>
+            </Col>
+            <Col md={6} className="text-end">
+              <h5>3,394.00ج.م</h5>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <h5>Tax</h5>
+            </Col>
+            <Col md={6} className="text-end">
+              <h5>0.00ج.م</h5>
+            </Col>
+          </Row>
+        </Col>
       </Row>
     </Container>
   );

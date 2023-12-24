@@ -5,10 +5,10 @@ function CartItemQuantityBtn() {
   return (
     <form>
       <Row className={classes.quantityBtns + " justify-content-around"}>
-        <Col md={3} sm={3} className={classes.quantityDecrement}>
+        <Col md={2} sm={2} className={classes.quantityDecrement}>
           -
         </Col>
-        <Col md={3} sm={3} className={classes.quantity}>
+        <Col md={2} sm={2} className={classes.quantity}>
           <input
             type="number"
             class="form-control"
@@ -16,7 +16,7 @@ function CartItemQuantityBtn() {
             className={classes.quantityInput}
           />
         </Col>
-        <Col md={3} sm={3} className={classes.quantityIncrement}>
+        <Col md={2} sm={2} className={classes.quantityIncrement}>
           +
         </Col>
       </Row>
