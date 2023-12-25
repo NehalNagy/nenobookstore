@@ -1,15 +1,32 @@
 .quantityBtns {
-  border: 1px solid #929dad;
-  width: 100%;
+  border: 1px solid #dbdbdb;
+  width: 50%;
+  margin: 0 auto;
 }
 .quantityIncrement {
-  border-left: 1px solid #929dad;
+  border-left: 1px solid #dbdbdb;
+  padding: 0;
 }
 .quantityDecrement {
-  border-right: 1px solid #929dad;
+  border-right: 1px solid #dbdbdb;
+  padding: 0;
 }
 
 .quantityInput {
   width: 100%;
   border: none;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.quantityDecrementBtn,
+.quantityIncrementBtn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: inherit;
+  font-size: 25px;
+  font-weight: bold;
+  color: #dbdbdb;
 }

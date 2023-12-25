@@ -10,7 +10,7 @@ function CartItem() {
       <div className="col-md-2 col-sm-2">
         <Image src={CartItemImage} className={classes.cartItemImage} />
       </div>
-      <div className="col-md-8 col-sm-5">
+      <div className="col-md-10 col-sm-5">
         <span className={classes.cartItemCode}>6111501131100</span>
         <p className={classes.itemName}>
           MUST KINDERGARTEN BACKPACK LITTLE FAIRY <br /> No: 84489

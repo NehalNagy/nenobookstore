@@ -4,20 +4,19 @@ import classes from "./CartItemQuantityBtn.module.css";
 function CartItemQuantityBtn() {
   return (
     <form>
-      <Row className={classes.quantityBtns + " justify-content-around"}>
-        <Col md={2} sm={2} className={classes.quantityDecrement}>
-          -
+      <Row className={classes.quantityBtns + " justify-content-between"}>
+        <Col md={3} className={classes.quantityDecrement}>
+          <button type="button" className={classes.quantityDecrementBtn}>
+            -
+          </button>
         </Col>
-        <Col md={2} sm={2} className={classes.quantity}>
-          <input
-            type="number"
-            class="form-control"
-            value="2"
-            className={classes.quantityInput}
-          />
+        <Col md={6} className={classes.quantity}>
+          <input type="number" value="20" className={classes.quantityInput} />
         </Col>
-        <Col md={2} sm={2} className={classes.quantityIncrement}>
-          +
+        <Col md={3} className={classes.quantityIncrement}>
+          <button type="button" className={classes.quantityIncrementBtn}>
+            +
+          </button>
         </Col>
       </Row>
     </form>
