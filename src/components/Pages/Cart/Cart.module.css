@@ -4,3 +4,38 @@
 .checkoutPanel {
   background-color: #f8f8f8;
 }
+
+.horizontalLine {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #929dad;
+}
+
+.discountCodeInput {
+  width: 100%;
+  border: none;
+}
+.discountBtn,
+.checkoutBtn {
+  border-radius: 0% !important;
+  padding: 10px;
+  margin-top: 10px;
+}
+.discountBtn {
+  width: 40%;
+}
+.checkoutBtn {
+  width: 100%;
+}
+.discountBtn:hover,
+.checkoutBtn:hover {
+  background-color: white !important;
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+.checkoutBtnWrapper {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #929dad;
+}
