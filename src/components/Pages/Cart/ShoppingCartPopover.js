@@ -4,6 +4,7 @@ import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import CartItem from "../../../images/backpack.jpg";
 import classes from "./ShoppingCartPopover.module.css";
 import { Button } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 function ShoppingCartPopover() {
   return (
@@ -31,19 +32,25 @@ function ShoppingCartPopover() {
         <div className="col-6 text-end">
           <h5>1500 LE</h5>
         </div>
-
-      
       </div>
-      <div className="row mt-3">  <div className="col-6">
-          <Button type="submit" variant="dark" className={classes.cartPopoverBtn}>
-             Ckeckout
+      <div className="row mt-3">
+        <div className="col-6">
+          <Button
+            type="submit"
+            variant="dark"
+            className={classes.cartPopoverBtn}
+          >
+            Ckeckout
           </Button>
         </div>
         <div className="col-6">
-          <Button type="submit" variant="outline-dark" className={classes.cartPopoverBtn}>
-             Edit cart
-          </Button>
-        </div></div>
+          <NavLink to="/cart">
+            <Button variant="outline-dark" className={classes.cartPopoverBtn}>
+              Edit cart
+            </Button>
+          </NavLink>
+        </div>
+      </div>
     </div>
   );
 }

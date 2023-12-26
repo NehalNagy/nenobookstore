@@ -10,6 +10,7 @@ import logo from "../../images/Logo_S_A.png";
 import classes from "./TopHeader.module.css";
 import { Popover, OverlayTrigger } from "react-bootstrap";
 import ShoppingCartPopover from "../Pages/Cart/ShoppingCartPopover";
+import { useState } from "react";
 
 const popover = (
   <Popover id="popover-basic" className={classes.popoverContainer}>
@@ -22,6 +23,7 @@ const popover = (
 
 function TopHeader() {
   const token = useRouteLoaderData("root");
+
   return (
     <header>
       <div className={classes.headerTop + " container"}>
@@ -54,7 +56,6 @@ function TopHeader() {
                 <li className="row">
                   <span className="col-md-12 text-center">
                     <NavLink to="/account?mode=login">
-                      {" "}
                       <FontAwesomeIcon icon={faUser} />
                     </NavLink>
                   </span>
@@ -71,13 +72,15 @@ function TopHeader() {
               >
                 <li className={classes.myCartBtn + " row"}>
                   <span className="col-md-12 text-center">
-                    <NavLink>
-                      <FontAwesomeIcon icon={faCartShopping} />
-                    </NavLink>
+                    <FontAwesomeIcon
+                      icon={faCartShopping}
+                      className={classes.myCartText}
+                    />
+
                     <span className={classes.cartBadge}> 2</span>
                   </span>
                   <span className="col-md-12 text-center d-none d-sm-block">
-                    <NavLink>My Cart</NavLink>
+                    <span className={classes.myCartText}>My Cart</span>
                   </span>
                 </li>
               </OverlayTrigger>

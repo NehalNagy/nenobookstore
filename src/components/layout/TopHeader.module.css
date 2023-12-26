@@ -11,6 +11,9 @@
 .headerControls button {
   color: black;
 }
+.myCartText {
+  cursor: pointer;
+}
 .lang {
   color: black;
 }
