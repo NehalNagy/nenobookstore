@@ -10,7 +10,6 @@ import logo from "../../images/Logo_S_A.png";
 import classes from "./TopHeader.module.css";
 import { Popover, OverlayTrigger } from "react-bootstrap";
 import ShoppingCartPopover from "../Pages/Cart/ShoppingCartPopover";
-import { useState } from "react";
 
 const popover = (
   <Popover id="popover-basic" className={classes.popoverContainer}>
