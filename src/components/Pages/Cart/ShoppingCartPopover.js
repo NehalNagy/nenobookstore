@@ -45,7 +45,8 @@ function ShoppingCartPopover() {
         </div>
         <div className="col-6">
           <NavLink to="/cart">
-            <Button variant="outline-dark" className={classes.cartPopoverBtn}>
+            <Button variant="outline-dark" className={classes.cartPopoverBtn} onClick={()=>{
+            document.getElementById("popoverId").style.display= "none";}}>
               Edit cart
             </Button>
           </NavLink>

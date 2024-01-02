@@ -83,7 +83,7 @@ export async function action({ request }) {
   };
   //code sand box url >>>>> https://575pgn-8080.csb.app/
   // local host >>>>>>>>>>> http://localhost:8080/
-  const response = await fetch("https://575pgn-8080.csb.app/" + mode, {
+  const response = await fetch("http://localhost:8080/" + mode, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

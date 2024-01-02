@@ -12,10 +12,10 @@ import { Popover, OverlayTrigger } from "react-bootstrap";
 import ShoppingCartPopover from "../Pages/Cart/ShoppingCartPopover";
 
 const popover = (
-  <Popover id="popover-basic" className={classes.popoverContainer}>
+  <Popover id="popoverId" className={classes.popoverContainer}>
     <Popover.Header as="h3">My Shopping Cart</Popover.Header>
     <Popover.Body>
-      <ShoppingCartPopover />
+      <ShoppingCartPopover/>
     </Popover.Body>
   </Popover>
 );
