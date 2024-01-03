@@ -93,6 +93,21 @@ function TopHeader() {
                   <NavLink to="/">My Wishlist</NavLink>
                 </span>
               </li>
+
+              {token && (
+                <li className="row">
+                <span className="col-md-12 text-center">
+                  <NavLink to="/myaccount">
+                    <FontAwesomeIcon icon={faUser} />
+                  </NavLink>
+                </span>
+                <span className="col-md-12 text-center d-none d-sm-block">
+                  <NavLink to="/myaccount">My Account</NavLink>
+                </span>
+              </li>
+              )}
+
+
               {token && (
                 <li className="row">
                   <span className="col-md-12 text-center">

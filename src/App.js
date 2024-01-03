@@ -12,6 +12,7 @@ import ErrorPage from "./components/ErrorPage";
 import { action as logoutAction } from "./components/account/Logout";
 import { checkAuthLoader, tokenLoader } from "./util/auth";
 import ItemsList from "./components/Pages/Products/ItemsList";
+import MyAccount from "./components/account/MyAccount";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
         element: <Cart />,
         // loader: checkAuthLoader,
       },
+      {
+        path: "myaccount",
+        element: <MyAccount />,
+        loader: checkAuthLoader,
+      },
     ],
   },
   {
@@ -35,7 +41,7 @@ const router = createBrowserRouter([
     element: <Authentication />,
     action: authAction,
   },
-
+  
   {
     path: "logout",
     action: logoutAction,
