@@ -37,8 +37,12 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-.form-check-input{
+.form-check-input {
   border: 1px solid #a2a6aa !important;
 }
 .form-check-input:checked {
-  background-color: #25C357;}
+  background-color: #25c357;
+}
+.nav-item:hover{
+  border: 1px solid #D2D2D2;
+}
