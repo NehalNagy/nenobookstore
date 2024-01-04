@@ -12,7 +12,10 @@ import ErrorPage from "./components/ErrorPage";
 import { action as logoutAction } from "./components/account/Logout";
 import { checkAuthLoader, tokenLoader } from "./util/auth";
 import ItemsList from "./components/Pages/Products/ItemsList";
-import MyAccount from "./components/account/MyAccount";
+import MyAccountLayout from "./components/account/MyAccount/MyAccountLayout";
+import MyAccount from "./components/account/MyAccount/MyAccount";
+import MyOrders from "./components/account/MyAccount/MyOrders";
+import MyWishlist from "./components/account/MyAccount/MyWishlist";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,9 +33,14 @@ const router = createBrowserRouter([
         // loader: checkAuthLoader,
       },
       {
-        path: "myaccount",
-        element: <MyAccount />,
-        loader: checkAuthLoader,
+        path: "/",
+        element: <MyAccountLayout />,
+        // loader: checkAuthLoader,
+        children: [
+          { path: "myaccount", element: <MyAccount /> },
+          { path: "myorders", element: <MyOrders /> },
+          { path: "mywishlist", element: <MyWishlist /> },
+        ],
       },
     ],
   },
@@ -41,7 +49,7 @@ const router = createBrowserRouter([
     element: <Authentication />,
     action: authAction,
   },
-  
+
   {
     path: "logout",
     action: logoutAction,

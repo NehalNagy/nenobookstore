@@ -1,0 +1,8 @@
+.myAccountList {
+  list-style: none;
+}
+
+.myAccountList a {
+  text-decoration: none;
+  color: black;
+}

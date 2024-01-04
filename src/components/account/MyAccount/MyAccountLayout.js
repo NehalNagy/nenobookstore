@@ -1,33 +1,41 @@
+import { useState } from "react";
+import { Outlet, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import classes from "./MyAccount.module.css";
-function MyAccount() {
+import classes from "./MyAccountLayout.module.css";
+function MyAccountLayout() {
+  // const [selectedItem, setSelectedItem] = useState(false);
   return (
     <div className="container">
       <div className="row mt-4">
         <div className="col-md-3">
-          <ul className={classes.myAccountList +" p-0"}>
-            <li className="row">
-              <div className="col-7">My Account</div>
-              <div className="col-4 text-end">
-                <FontAwesomeIcon icon={faChevronRight} />
-              </div>
-            </li>
+          <ul className={classes.myAccountList + " p-0"}>
+            <NavLink to="myaccount">
+              <li className="row">
+                <div className="col-7">My Account</div>
+                <div className="col-4 text-end">
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </div>
+              </li>
+            </NavLink>
 
-            <li className="row">
-              <div className="col-7">My Orders</div>
-              <div className="col-4 text-end">
-                <FontAwesomeIcon icon={faChevronRight} />
-              </div>
-            </li>
+            <NavLink to="myorders">
+              <li className="row">
+                <div className="col-7">My Orders</div>
+                <div className="col-4 text-end">
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </div>
+              </li>
+            </NavLink>
 
-
-            <li className="row">
-              <div className="col-7">My Wishlist</div>
-              <div className="col-4 text-end">
-                <FontAwesomeIcon icon={faChevronRight} />
-              </div>
-            </li>
+            <NavLink to="mywishlist">
+              <li className="row">
+                <div className="col-7">My Wishlist</div>
+                <div className="col-4 text-end">
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </div>
+              </li>
+            </NavLink>
             <li className="row">
               <div className="col-7">Address Book</div>
               <div className="col-4 text-end">
@@ -61,10 +69,10 @@ function MyAccount() {
           </ul>
         </div>
         <div className="col-md-9">
-          <h4>My Account</h4>
+          <Outlet />
         </div>
       </div>
     </div>
   );
 }
-export default MyAccount;
+export default MyAccountLayout;
