@@ -12,8 +12,8 @@ function MyAccountLayout() {
           <ul className={classes.myAccountList + " p-0"}>
             <NavLink to="myaccount">
               <li className="row">
-                <div className="col-7">My Account</div>
-                <div className="col-4 text-end">
+                <div className="col-8">My Account</div>
+                <div className="col-3 text-end">
                   <FontAwesomeIcon icon={faChevronRight} />
                 </div>
               </li>
@@ -21,8 +21,8 @@ function MyAccountLayout() {
 
             <NavLink to="myorders">
               <li className="row">
-                <div className="col-7">My Orders</div>
-                <div className="col-4 text-end">
+                <div className="col-8">My Orders</div>
+                <div className="col-3 text-end">
                   <FontAwesomeIcon icon={faChevronRight} />
                 </div>
               </li>
@@ -30,42 +30,53 @@ function MyAccountLayout() {
 
             <NavLink to="mywishlist">
               <li className="row">
-                <div className="col-7">My Wishlist</div>
-                <div className="col-4 text-end">
+                <div className="col-8">My Wishlist</div>
+                <div className="col-3 text-end">
                   <FontAwesomeIcon icon={faChevronRight} />
                 </div>
               </li>
             </NavLink>
-            <li className="row">
-              <div className="col-7">Address Book</div>
-              <div className="col-4 text-end">
-                <FontAwesomeIcon icon={faChevronRight} />
-              </div>
-            </li>
-            <li className="row">
-              <div className="col-7">Account Information</div>
-              <div className="col-4 text-end">
-                <FontAwesomeIcon icon={faChevronRight} />
-              </div>
-            </li>
-            <li className="row">
-              <div className="col-7">My Product Reviews</div>
-              <div className="col-4 text-end">
-                <FontAwesomeIcon icon={faChevronRight} />
-              </div>
-            </li>
-            <li className="row">
-              <div className="col-7">Newsletter Subscriptions</div>
-              <div className="col-4 text-end">
-                <FontAwesomeIcon icon={faChevronRight} />
-              </div>
-            </li>
-            <li className="row">
-              <div className="col-7">Compare Products</div>
-              <div className="col-4 text-end">
-                <FontAwesomeIcon icon={faChevronRight} />
-              </div>
-            </li>
+            <NavLink to="addressbook">
+              <li className="row">
+                <div className="col-8">Address Book</div>
+                <div className="col-3 text-end">
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </div>
+              </li>
+            </NavLink>
+
+            <NavLink to="myaccountinfo">
+              <li className="row">
+                <div className="col-8">Account Information</div>
+                <div className="col-3 text-end">
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </div>
+              </li>
+            </NavLink>
+            <NavLink to="myproductreviews">
+              <li className="row">
+                <div className="col-8">My Product Reviews</div>
+                <div className="col-3 text-end">
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </div>
+              </li>
+            </NavLink>
+            <NavLink to="newslettersub">
+              <li className="row">
+                <div className="col-8">Newsletter Subscriptions</div>
+                <div className="col-3 text-end">
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </div>
+              </li>
+            </NavLink>
+            <NavLink to="compareproducts">
+              <li className="row">
+                <div className="col-8">Compare Products</div>
+                <div className="col-3 text-end">
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </div>
+              </li>
+            </NavLink>
           </ul>
         </div>
         <div className="col-md-9">

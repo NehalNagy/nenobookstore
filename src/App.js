@@ -16,6 +16,13 @@ import MyAccountLayout from "./components/account/MyAccount/MyAccountLayout";
 import MyAccount from "./components/account/MyAccount/MyAccount";
 import MyOrders from "./components/account/MyAccount/MyOrders";
 import MyWishlist from "./components/account/MyAccount/MyWishlist";
+
+import MyAddressBook from "./components/account/MyAccount/MyAddressBook";
+import MyAccountInfo from "./components/account/MyAccount/MyAccountInfo";
+import MyProductsReviews from "./components/account/MyAccount/MyProductsReviews";
+import NewsletterSubscriptions from "./components/account/MyAccount/NewsletterSubscriptions";
+import CompareProducts from "./components/account/MyAccount/CompareProducts";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,12 +42,17 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <MyAccountLayout />,
-        // loader: checkAuthLoader,
         children: [
           { path: "myaccount", element: <MyAccount /> },
           { path: "myorders", element: <MyOrders /> },
           { path: "mywishlist", element: <MyWishlist /> },
+          { path: "addressbook", element: <MyAddressBook /> },
+          { path: "myaccountinfo", element: <MyAccountInfo /> },
+          { path: "myproductreviews", element: <MyProductsReviews /> },
+          { path: "newslettersub", element: <NewsletterSubscriptions /> },
+          { path: "compareproducts", element: <CompareProducts /> },
         ],
+        // loader: checkAuthLoader,
       },
     ],
   },
