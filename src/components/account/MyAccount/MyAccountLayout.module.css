@@ -6,3 +6,9 @@
   text-decoration: none;
   color: black;
 }
+.myAccountList li {
+  margin-bottom: 10px;
+}
+ .activeLink {
+  font-weight: bold;
+}
