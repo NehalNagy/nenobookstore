@@ -2,10 +2,10 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
-// import LeftBanner from "../../../images/BTS-en.png";
-import LeftBanner from "../../../images/Palestine.png";
-import RightBanner1 from "../../../images/montessory-en.png";
-import RightBanner2 from "../../../images/babycare-en.png";
+import LeftBanner from "../../../images/BTS-en.png";
+//import LeftBanner from "../../../images/Palestine.png";
+import RightBanner1 from "../../../images/desk-set-en.png";
+import RightBanner2 from "../../../images/parker-jotter-festive-season-en.png";
 import classes from "./HomeTopSection.module.css";
 function HomeTopSection() {
   return (
@@ -16,18 +16,18 @@ function HomeTopSection() {
             <Image src={LeftBanner} className={classes.banners} />
           </Col>
           <Col xs={12} md={5} className="pe-0">
-            <Container>
-              <Row>
-                <Col xs={12} md={12} className="pe-0">
+            <Container className="h-100">
+              <Row className="h-100">
+                <Col xs={12} className="pe-0 mb-2">
                   <Image
                     src={RightBanner1}
-                    className={classes.banners + " mb-3 float-end"}
+                    className={classes.banners + " h-100 float-end"}
                   />
                 </Col>
-                <Col xs={12} md={12} className="pe-0">
+                <Col xs={12} className="pe-0 mt-2">
                   <Image
                     src={RightBanner2}
-                    className={classes.banners + " float-end"}
+                    className={classes.banners + " h-100 float-end"}
                   />
                 </Col>
               </Row>
