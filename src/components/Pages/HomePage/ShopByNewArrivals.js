@@ -47,7 +47,7 @@ const DUMMY_Products_NewArrivals = [
 ];
 function ShopByNewArrivals() {
   const productsListNewArrivals = DUMMY_Products_NewArrivals.map((product) => (
-    <ItemCard numberOfCol={3} product={product} />
+    <ItemCard key={product.id} numberOfCol={3} product={product} />
   ));
   return (
     <>

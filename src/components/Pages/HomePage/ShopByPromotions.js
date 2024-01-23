@@ -47,7 +47,7 @@ const DUMMY_Products_promotion = [
 ];
 function ShopByPromotion() {
   const productsListPromotion = DUMMY_Products_promotion.map((product) => (
-    <ItemCard numberOfCol={3} product={product} />
+    <ItemCard key={product.id} numberOfCol={3} product={product} />
   ));
   return (
     <>

@@ -11,18 +11,24 @@ function HomeTopSection() {
   return (
     <>
       <Container>
-        <Row>
+        <Row className="mb-5">
           <Col xs={12} md={7} className="p-0">
-            <Image src={LeftBanner} className="img-fluid mb-3" />
+            <Image src={LeftBanner} className={classes.banners} />
           </Col>
           <Col xs={12} md={5} className="pe-0">
             <Container>
               <Row>
                 <Col xs={12} md={12} className="pe-0">
-                  <Image src={RightBanner1} className="img-fluid mb-3" />
+                  <Image
+                    src={RightBanner1}
+                    className={classes.banners + " mb-3 float-end"}
+                  />
                 </Col>
                 <Col xs={12} md={12} className="pe-0">
-                  <Image src={RightBanner2} className="img-fluid" />
+                  <Image
+                    src={RightBanner2}
+                    className={classes.banners + " float-end"}
+                  />
                 </Col>
               </Row>
             </Container>
