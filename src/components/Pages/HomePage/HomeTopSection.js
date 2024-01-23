@@ -12,7 +12,7 @@ function HomeTopSection() {
     <>
       <Container>
         <Row className="mb-5">
-          <Col xs={12} md={7} className="p-0">
+          <Col xs={12} md={7} className="p-0 mb-2">
             <Image src={LeftBanner} className={classes.banners} />
           </Col>
           <Col xs={12} md={5} className="pe-0">
@@ -24,7 +24,7 @@ function HomeTopSection() {
                     className={classes.banners + " h-100 float-end"}
                   />
                 </Col>
-                <Col xs={12} className="pe-0 mt-2">
+                <Col xs={12} className="pe-0 mt-2 mb-2">
                   <Image
                     src={RightBanner2}
                     className={classes.banners + " h-100 float-end"}
