@@ -15,7 +15,7 @@ const popover = (
   <Popover id="popoverId" className={classes.popoverContainer}>
     <Popover.Header as="h3">My Shopping Cart</Popover.Header>
     <Popover.Body>
-      <ShoppingCartPopover/>
+      <ShoppingCartPopover />
     </Popover.Body>
   </Popover>
 );
@@ -79,7 +79,7 @@ function TopHeader() {
                     <span className={classes.cartBadge}> 2</span>
                   </span>
                   <span className="col-md-12 text-center d-none d-sm-block">
-                    <span className={classes.myCartText}>My Cart</span>
+                    <span className={classes.myCartText}> Cart</span>
                   </span>
                 </li>
               </OverlayTrigger>
@@ -90,23 +90,22 @@ function TopHeader() {
                   </NavLink>
                 </span>
                 <span className="col-md-12 text-center d-none d-sm-block">
-                  <NavLink to="/">My Wishlist</NavLink>
+                  <NavLink to="/"> Wishlist</NavLink>
                 </span>
               </li>
 
               {token && (
                 <li className="row">
-                <span className="col-md-12 text-center">
-                  <NavLink to="/myaccount">
-                    <FontAwesomeIcon icon={faUser} />
-                  </NavLink>
-                </span>
-                <span className="col-md-12 text-center d-none d-sm-block">
-                  <NavLink to="/myaccount">My Account</NavLink>
-                </span>
-              </li>
+                  <span className="col-md-12 text-center">
+                    <NavLink to="/myaccount">
+                      <FontAwesomeIcon icon={faUser} />
+                    </NavLink>
+                  </span>
+                  <span className="col-md-12 text-center d-none d-sm-block">
+                    <NavLink to="/myaccount">My Account</NavLink>
+                  </span>
+                </li>
               )}
-
 
               {token && (
                 <li className="row">
