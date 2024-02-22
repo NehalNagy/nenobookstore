@@ -1,14 +1,16 @@
+import { useContext } from "react";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 import { NavLink } from "react-router-dom";
 import classes from "./ItemCard.module.css";
-import Stapler from "../../../images/promtion1.jpg";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { CartContext } from "../../store/shopping-cart-context.jsx";
+
 function ItemCard(props) {
+  const { addItemToCart } = useContext(CartContext);
   return (
     <Col xs={4} md={props.numberOfCol} className="text-center mb-4">
       <div className={classes.itemImage}>
@@ -39,7 +41,11 @@ function ItemCard(props) {
           <span className={classes.finalPrice}>414.00ج.م </span>
         </div>
       </div>
-      <Button type="submit" variant="dark" className={classes.addToCartBtn}>
+      <Button
+        onClick={() => addItemToCart(props.product.id)}
+        variant="dark"
+        className={classes.addToCartBtn}
+      >
         <FontAwesomeIcon icon={faCartShopping} /> Add to Cart
       </Button>
     </Col>

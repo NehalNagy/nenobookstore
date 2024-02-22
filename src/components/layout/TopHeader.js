@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { Form, NavLink, useRouteLoaderData } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,18 +11,24 @@ import logo from "../../images/Logo_S_A.png";
 import classes from "./TopHeader.module.css";
 import { Popover, OverlayTrigger } from "react-bootstrap";
 import ShoppingCartPopover from "../Pages/Cart/ShoppingCartPopover";
-
-const popover = (
-  <Popover id="popoverId" className={classes.popoverContainer}>
-    <Popover.Header as="h3">My Shopping Cart</Popover.Header>
-    <Popover.Body>
-      <ShoppingCartPopover/>
-    </Popover.Body>
-  </Popover>
-);
+import { CartContext } from "../store/shopping-cart-context.jsx";
 
 function TopHeader() {
   const token = useRouteLoaderData("root");
+  const { items } = useContext(CartContext);
+  const cartQuantity = items.length;
+  const popover = (
+    <Popover id="popoverId" className={classes.popoverContainer}>
+      <Popover.Header as="h3">My Shopping Cart</Popover.Header>
+      <Popover.Body>
+        {cartQuantity > 0 ? (
+          <ShoppingCartPopover />
+        ) : (
+          <p>You have no items in your shopping cart.</p>
+        )}
+      </Popover.Body>
+    </Popover>
+  );
 
   return (
     <header>
@@ -76,7 +83,9 @@ function TopHeader() {
                       className={classes.myCartText}
                     />
 
-                    <span className={classes.cartBadge}> 2</span>
+                    {cartQuantity > 0 && (
+                      <span className={classes.cartBadge}>{cartQuantity}</span>
+                    )}
                   </span>
                   <span className="col-md-12 text-center d-none d-sm-block">
                     <span className={classes.myCartText}>My Cart</span>
@@ -96,17 +105,16 @@ function TopHeader() {
 
               {token && (
                 <li className="row">
-                <span className="col-md-12 text-center">
-                  <NavLink to="/myaccount">
-                    <FontAwesomeIcon icon={faUser} />
-                  </NavLink>
-                </span>
-                <span className="col-md-12 text-center d-none d-sm-block">
-                  <NavLink to="/myaccount">My Account</NavLink>
-                </span>
-              </li>
+                  <span className="col-md-12 text-center">
+                    <NavLink to="/myaccount">
+                      <FontAwesomeIcon icon={faUser} />
+                    </NavLink>
+                  </span>
+                  <span className="col-md-12 text-center d-none d-sm-block">
+                    <NavLink to="/myaccount">My Account</NavLink>
+                  </span>
+                </li>
               )}
-
 
               {token && (
                 <li className="row">

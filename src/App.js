@@ -22,6 +22,7 @@ import MyAccountInfo from "./components/account/MyAccount/MyAccountInfo";
 import MyProductsReviews from "./components/account/MyAccount/MyProductsReviews";
 import NewsletterSubscriptions from "./components/account/MyAccount/NewsletterSubscriptions";
 import CompareProducts from "./components/account/MyAccount/CompareProducts";
+import CartContextProvider from "./components/store/shopping-cart-context";
 
 const router = createBrowserRouter([
   {
@@ -69,7 +70,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <CartContextProvider>
+      <RouterProvider router={router} />
+    </CartContextProvider>
+  );
 }
 
 export default App;
