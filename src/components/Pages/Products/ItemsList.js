@@ -7,50 +7,8 @@ import { register } from "swiper/element/bundle";
 import { useRef } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Form from "react-bootstrap/Form";
+import { DUMMY_Products } from "./dummy-products";
 register();
-const DUMMY_Products = [
-  {
-    id: "p1",
-    name: "Sushi",
-    description: "Finest fish and veggies",
-    price: 22.99,
-    sku: "234jll",
-    stockQuantity: 6,
-    image: "abc",
-    discountPercent: 30,
-  },
-  {
-    id: "p2",
-    name: "Schnitzel",
-    description: "A german specialty!",
-    price: 16.5,
-    sku: "567mbn",
-    stockQuantity: 6,
-    image: "abc",
-    discountPercent: 40,
-  },
-  {
-    id: "p3",
-    name: "Barbecue Burger",
-    description: "American, raw, meaty",
-    price: 12.99,
-    sku: "876jkv",
-    stockQuantity: 6,
-    image: "abc",
-    discountPercent: 0,
-  },
-  {
-    id: "p4",
-    name: "Green Bowl",
-    description: "Healthy...and green...",
-    price: 18.99,
-    sku: "198ytr",
-    stockQuantity: 6,
-    image: "abc",
-    discountPercent: 10,
-  },
-];
-
 function ItemsList() {
   const swiperElRef = useRef(null);
   const productsList = DUMMY_Products.map((product) => (

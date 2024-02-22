@@ -18,7 +18,7 @@ function ItemCard(props) {
           </div>
         )}
         <NavLink to="#">
-          <Image src={Stapler} className="img-fluid mb-3" />
+          <Image src={props.product.image} className="img-fluid mb-3" />
           <span className={classes.wishlistIcon}>
             <FontAwesomeIcon icon={faHeart} />
           </span>
