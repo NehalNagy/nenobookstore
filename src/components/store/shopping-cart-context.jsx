@@ -64,6 +64,20 @@ function shoppingCartReducer(state, action) {
       items: updatedItems,
     };
   }
+
+  if (action.type === "DELETE_ITEM") {
+    const updatedItems = [...state.items];
+    const deletedItemIndex = updatedItems.findIndex(
+      (item) => item.id === action.payload.productId,
+    );
+    updatedItems.splice(deletedItemIndex, 1);
+
+    return {
+      ...state,
+      items: updatedItems,
+    };
+  }
+
   return state;
 }
 export default function CartContextProvider({ children }) {
@@ -77,6 +91,12 @@ export default function CartContextProvider({ children }) {
   function handleAddItemToCart(id) {
     shoppingCartDispatch({
       type: "ADD_ITEM",
+      payload: id,
+    });
+  }
+  function handleDeleteItemFromCart(id) {
+    shoppingCartDispatch({
+      type: "DELETE_ITEM",
       payload: id,
     });
   }
@@ -95,6 +115,7 @@ export default function CartContextProvider({ children }) {
     items: shoppingCartState.items,
     addItemToCart: handleAddItemToCart,
     updateItemQuantity: handleUpdateCartItemQuantity,
+    deleteItemFromCart: handleDeleteItemFromCart,
   };
   return (
     <CartContext.Provider value={CtxValue}>{children}</CartContext.Provider>
