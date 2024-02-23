@@ -9,7 +9,8 @@ import { Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 function ShoppingCartPopover() {
-  const { items } = useContext(CartContext);
+  const { items, subTotal } = useContext(CartContext);
+  const formattedSubTotal = `${subTotal.toFixed(2)} LE`;
   return (
     <div className="container-fluid">
       {items.map((cartItem) => (
@@ -38,7 +39,7 @@ function ShoppingCartPopover() {
           <h5>Cart Subtotal</h5>
         </div>
         <div className="col-6 text-end">
-          <h5>1500 LE</h5>
+          <h5>{formattedSubTotal}</h5>
         </div>
       </div>
 

@@ -2,6 +2,7 @@ import { createContext, useReducer } from "react";
 import { DUMMY_Products } from "../Pages/Products/dummy-products.js";
 export const CartContext = createContext({
   items: [],
+  subTotal:0,
   addItemToCart: () => {},
   updateItemQuantity: () => {},
 });
@@ -111,8 +112,14 @@ export default function CartContextProvider({ children }) {
     });
   }
 
+   const totalPrice = shoppingCartState.items.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0,
+  );
+
   const CtxValue = {
     items: shoppingCartState.items,
+    subTotal:totalPrice,
     addItemToCart: handleAddItemToCart,
     updateItemQuantity: handleUpdateCartItemQuantity,
     deleteItemFromCart: handleDeleteItemFromCart,

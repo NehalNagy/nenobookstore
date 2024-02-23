@@ -8,7 +8,8 @@ import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
 import CartItemQuantityBtn from "./CartItemQuantityBtn";
 function Cart() {
-  const { items } = useContext(CartContext);
+  const { items, subTotal } = useContext(CartContext);
+  const formattedSubTotal = `${subTotal.toFixed(2)} LE`;
   return (
     <Container>
       <h3>
@@ -45,7 +46,7 @@ function Cart() {
                       <CartItemQuantityBtn item={cartItem} />
                     </td>
                     <th className="text-center">
-                      {cartItem.quantity * cartItem.price}ج.م
+                      {cartItem.quantity * cartItem.price} LE
                     </th>
                   </tr>
                 ))}
@@ -59,7 +60,7 @@ function Cart() {
                 <h5>Subtotal</h5>
               </Col>
               <Col md={6} className="text-end">
-                <h5>3,394.00ج.م</h5>
+                <h5>{formattedSubTotal}</h5>
               </Col>
             </Row>
             <Row className={classes.horizontalLine}>
@@ -67,7 +68,7 @@ function Cart() {
                 <h5>Tax</h5>
               </Col>
               <Col md={6} className="text-end">
-                <h5>0.00ج.م</h5>
+                <h5>0.00 LE</h5>
               </Col>
             </Row>
             <Row className={classes.horizontalLine + " mt-4 mb-4"}>
@@ -75,7 +76,7 @@ function Cart() {
                 <h4>Order Total</h4>
               </Col>
               <Col md={6} className="text-end">
-                <h5>3,394.00ج.م</h5>
+                <h5>{formattedSubTotal}</h5>
               </Col>
             </Row>
 
