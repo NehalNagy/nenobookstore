@@ -12,11 +12,11 @@ function NewAccount() {
   const isSubmitting = navigation.state === "submitting";
   return (
     <div className={classes.loginWarapper}>
-      <div className={classes.logo + " mb-5"}>
+      <div className={classes.logo + " mb-2"}>
         <img src={logo} alt="website logo" />
       </div>
       <h3>Create an Account</h3>
-      <p> Create an account with</p>
+
       <Button
         type="submit"
         className={classes.loginBySocialBtn + " " + classes.loginByFacebookBtn}
@@ -37,7 +37,7 @@ function NewAccount() {
         <Container>
           <Row>
             <Col xs={6} md={6}>
-              <div className="form-floating mb-3">
+              <div className="form-floating mb-2">
                 <input
                   type="text"
                   className={classes.loginInput + " form-control"}
@@ -49,7 +49,7 @@ function NewAccount() {
               </div>
             </Col>
             <Col xs={6} md={6}>
-              <div className="form-floating mb-3">
+              <div className="form-floating mb-2">
                 <input
                   type="text"
                   className={classes.loginInput + " form-control"}
@@ -61,7 +61,7 @@ function NewAccount() {
               </div>
             </Col>
             <Col xs={12} md={12}>
-              <div className="form-floating mb-3">
+              <div className="form-floating mb-2">
                 <input
                   type="email"
                   className={classes.loginInput + " form-control"}
@@ -84,7 +84,7 @@ function NewAccount() {
                 <label htmlFor="password">Password</label>
               </div>
             </Col>
-            <Col xs={12} md={12} className="mt-3">
+            <Col xs={12} md={12} className="mt-2">
               <div className="form-floating">
                 <input
                   type="password"
@@ -100,7 +100,7 @@ function NewAccount() {
           <Button
             type="submit"
             variant="dark"
-            className={classes.loginBtn + " mt-3"}
+            className={classes.loginBtn + " mt-2"}
             disabled={isSubmitting}
           >
             {isSubmitting ? "Submitting..." : "Create an account"}

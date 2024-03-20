@@ -6,7 +6,8 @@
   position: relative;
 }
 .loginImage {
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   background: url("../../images/login-image.jpg") no-repeat center;
   background-size: cover;
 }
@@ -42,7 +43,7 @@
 .loginWarapper {
   width: 100%;
   max-width: 440px;
-  margin: 10% auto;
+  margin: 7% auto;
 }
 
 .loginBySocialBtn {
@@ -70,7 +71,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 45px 0 40px;
+  margin: 40px 0 35px;
   border-top: 1px solid #929dad;
 }
 .or span {
@@ -92,3 +93,11 @@
   border-radius: 0;
   border: 1px solid #979797;
 }
+/*Start validation*/
+.controlError {
+  color: #e71e1e;
+  font-size: 0.8rem;
+  height: 2rem;
+  padding: 0.5rem 0;
+}
+/*End validation*/
