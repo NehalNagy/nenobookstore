@@ -24,14 +24,18 @@ function Login() {
     hasError: passwordHasError,
   } = useInput("", (value) => hasMinLength(value, 6));
 
-  // function handleSubmit(event) {
-  //   event.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
 
-  //   if (emailHasError || passwordHasError) {
-  //     return;
-  //   }
-  //   console.log(emailValue, passwordValue);
-  // }
+    if (emailHasError || passwordHasError) {
+      return;
+    }
+    console.log(emailValue, passwordValue);
+
+    // event.form.dispatchEvent(
+    //   new Event("submit", { cancelable: true, bubbles: true })
+    // );
+  }
 
   return (
     <div className={classes.loginWarapper}>
@@ -57,7 +61,7 @@ function Login() {
         <span>OR</span>
       </p>
       <h5>Enter your email and password</h5>
-      <Form method="post" className="mt-2">
+      <Form onSubmit={handleSubmit} method="post" className="mt-2">
         <Container className="p-0">
           <Row>
             <Col xs={12} md={12}>
