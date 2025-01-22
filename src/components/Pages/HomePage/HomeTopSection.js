@@ -2,7 +2,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
-import LeftBanner from "../../../images/BTS-en.png";
+import LeftBanner from "../../../images/BTS-en.jpg";
 //import LeftBanner from "../../../images/Palestine.png";
 import RightBanner1 from "../../../images/desk-set-en.png";
 import RightBanner2 from "../../../images/parker-jotter-festive-season-en.png";

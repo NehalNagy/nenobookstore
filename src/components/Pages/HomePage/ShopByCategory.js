@@ -13,7 +13,8 @@ import CategoryHome from "../../../images/food-tools.jpg";
 import CategoryToys from "../../../images/toys.jpg";
 import Categoryfitness from "../../../images/sport.jpg";
 import CategoryCamping from "../../../images/camping.jpg";
-import BannerGeneration from "../../../images/banner-generation.png";
+// import BannerGeneration from "../../../images/banner-generation.png";
+import BannerFuture from "../../../images/banner-future.png";
 import classes from "./ShopByCategory.module.css";
 
 function ShopByCategory() {
@@ -106,7 +107,7 @@ function ShopByCategory() {
         <Row>
           <Col xs={12} md={12}>
             <Image
-              src={BannerGeneration}
+              src={BannerFuture}
               className={classes.banner + " mb-3"}
             />
           </Col>
