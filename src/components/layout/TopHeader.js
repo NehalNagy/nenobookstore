@@ -7,7 +7,7 @@ import {
   faArrowRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
-import logo from "../../images/Logo_S_A.png";
+import logo from "../../images/logo.png";
 import classes from "./TopHeader.module.css";
 import { Popover, OverlayTrigger } from "react-bootstrap";
 import ShoppingCartPopover from "../Pages/Cart/ShoppingCartPopover";
