@@ -35,7 +35,7 @@ function BottomBanners() {
             <Image src={SubscribeBanner} className={classes.bannerImages} />
             <Form className={classes.subscribeForm}>
               <div className=" row mb-5 ">
-                <div className="col-md-9">
+                <div className="col-8">
                   <Form.Group controlId="formSearch">
                     <Form.Control
                       type="text"
@@ -44,9 +44,9 @@ function BottomBanners() {
                     />
                   </Form.Group>
                 </div>
-                <div className="col-md-3">
+                <div className="col-3">
                   <Button type="submit" variant="dark">
-                    Search
+                    subscribe
                   </Button>
                 </div>
               </div>

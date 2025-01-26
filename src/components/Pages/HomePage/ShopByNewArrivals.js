@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import classes from "./ShopByPromotion.module.css";
 import { DUMMY_Products } from "../Products/dummy-products";
 function ShopByNewArrivals() {
-  const productsListNewArrivals = DUMMY_Products.map((product) => (
+  const productsListNewArrivals = DUMMY_Products.slice(0, 4).map((product) => (
     <ItemCard key={product.id} numberOfCol={3} product={product} />
   ));
   return (

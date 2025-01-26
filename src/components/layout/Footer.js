@@ -25,7 +25,7 @@ function Footer() {
             Head Office
           </h5>
           <p className={classes.addresses}>
-            64 Zaker Hussein Street - Naser City - Cairo
+            Zaker Hussein Street - Naser City - Cairo
           </p>
 
           <h5>
@@ -43,10 +43,6 @@ function Footer() {
             Saturday - Thursday: 10:00 AM - 11:00 PM Friday: 2:00 PM - 11:00 PM
           </p>
 
-          <h5>
-            <FontAwesomeIcon icon={faClock} className="me-3" />
-            Except for the branches Obour-El Shorouk-El Rehab-
-          </h5>
           <h5>
             <FontAwesomeIcon icon={faClock} className="me-3" />
             Waterway-Downtown
@@ -184,7 +180,7 @@ function Footer() {
       <Row>
         <div className={classes.copyRight}>
           <div className="col-12 text-center p-2">
-            Samir & Aly Libraries © 2022 All Rights Reserved
+            © {new Date().getFullYear()} All Rights Reserved
           </div>
         </div>
       </Row>

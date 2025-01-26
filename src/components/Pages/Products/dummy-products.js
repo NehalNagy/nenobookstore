@@ -1,7 +1,7 @@
 import p1 from "../../../images/products/p1.jpg";
 import p2 from "../../../images/products/p2.png";
 import p3 from "../../../images/products/p3.png";
-import p4 from "../../../images/products/p4.jpg";
+// import p4 from "../../../images/products/p4.jpg";
 import p5 from "../../../images/products/p5.jpg";
 import p6 from "../../../images/products/p6.png";
 
