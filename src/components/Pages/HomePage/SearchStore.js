@@ -7,7 +7,7 @@ function SearchStore() {
     <Container className="mt-4">
       <Form>
         <div className={classes.searchBgColor + " row mb-5 "}>
-          <div className="col-md-9">
+          <div className="col-8">
             <Form.Group controlId="formSearch">
               <Form.Control
                 type="text"
@@ -16,7 +16,7 @@ function SearchStore() {
               />
             </Form.Group>
           </div>
-          <div className="col-md-3 text-end">
+          <div className="col-4 text-end">
             <Button
               type="submit"
               className={classes.searchBtn + " border-0 rounded-0 pe-4 ps-4"}
