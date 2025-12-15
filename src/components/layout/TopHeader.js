@@ -34,7 +34,7 @@ function TopHeader() {
     <header>
       <div className={classes.headerTop + " container"}>
         <div className="row align-items-center ">
-          <div className="col-md-4 col-sm-12 col-xs-12">
+          <div className="col-12 col-md-4 ">
             <ul className="list-unstyled list-group list-group-horizontal ">
               <li className={classes.rightBorder}>
                 <a href="/" className={classes.lang + " p-3"}>
@@ -49,15 +49,15 @@ function TopHeader() {
               </li>
             </ul>
           </div>
-          <div className={classes.logo + " col-md-4 col-sm-3 col-sx-2"}>
+          <div className={classes.logo + " col-6 col-md-4 text-center"}>
             <NavLink to="/">
               <img src={logo} alt="website logo" />
             </NavLink>
           </div>
           <div
-            className={classes.headerControls + " col-md-4 col-sm-3 col-xs-2"}
+            className={classes.headerControls + " col-6 col-md-4 "}
           >
-            <ul className="list-unstyled list-group list-group-horizontal container">
+            <ul className="list-unstyled list-group list-group-horizontal container justify-content-end">
               {!token && (
                 <li className="row">
                   <span className="col-md-12 text-center">
