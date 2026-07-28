@@ -7,7 +7,6 @@ import Login from "./Login";
 import {
   Link,
   useSearchParams,
-  json,
   redirect,
   useActionData,
 } from "react-router-dom";
@@ -74,7 +73,7 @@ export async function action({ request }) {
   const mode = searchparams.get("mode") || "login";
   console.log(mode);
   if (mode !== "login" && mode !== "signup") {
-    throw json({ message: "Unsupported mode." }, { status: 422 });
+    throw Response.json({ message: "Unsupported mode." }, { status: 422 });
   }
   const data = await request.formData();
   const authData = {
@@ -95,7 +94,10 @@ export async function action({ request }) {
     return response;
   }
   if (!response.ok) {
-    throw json({ message: "could not authenticate user." }, { status: 500 });
+    throw Response.json(
+      { message: "could not authenticate user." },
+      { status: 500 }
+    );
   }
 
   const resData = await response.json();
