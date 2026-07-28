@@ -10,7 +10,7 @@ import Authentication, {
 } from "./components/account/Authentication";
 import ErrorPage from "./components/ErrorPage";
 import { action as logoutAction } from "./components/account/Logout";
-import { checkAuthLoader, tokenLoader } from "./util/auth";
+import {  tokenLoader } from "./util/auth";
 import ItemsList from "./components/Pages/Products/ItemsList";
 import MyAccountLayout from "./components/account/MyAccount/MyAccountLayout";
 import MyAccount from "./components/account/MyAccount/MyAccount";
